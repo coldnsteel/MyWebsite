@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebsite - Premium Stamps & Collectibles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4a5568;
+        }
+
+        .crypto-badge {
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #4a5568;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            background: #e2e8f0;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 30px;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .payment-method {
+            background: #f7fafc;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .premium-showcase {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .premium-showcase h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2d3748;
+        }
+
+        .premium-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .premium-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .premium-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .item-image {
+            height: 300px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #999;
+            position: relative;
+        }
+
+        .item-details {
+            padding: 30px;
+        }
+
+        .item-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .item-description {
+            color: #718096;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .item-condition {
+            background: #48bb78;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .item-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e53e3e;
+            margin-bottom: 20px;
+        }
+
+        .payment-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .crypto-button {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btc-button {
+            background: #f7931a;
+            color: white;
+        }
+
+        .btc-button:hover {
+            background: #e8830f;
+            transform: translateY(-2px);
+        }
+
+        .eth-button {
+            background: #627eea;
+            color: white;
+        }
+
+        .eth-button:hover {
+            background: #4c63d2;
+            transform: translateY(-2px);
+        }
+
+        .usdt-button {
+            background: #26a17b;
+            color: white;
+        }
+
+        .usdt-button:hover {
+            background: #219d77;
+            transform: translateY(-2px);
+        }
+
+        .paypal-button {
+            background: #0070ba;
+            color: white;
+        }
+
+        .paypal-button:hover {
+            background: #005ea6;
+            transform: translateY(-2px);
+        }
+
+        .manual-eth-button {
+            background: #9333ea;
+            color: white;
+        }
+
+        .manual-eth-button:hover {
+            background: #7c3aed;
+            transform: translateY(-2px);
+        }
+
+        .inventory-grid {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .inventory-grid h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #2d3748;
+        }
+
+        .inventory-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .inventory-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .inventory-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .submit-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            color: #718096;
+        }
+
+        .status-indicator {
+            background: #10b981;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .premium-items {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-buttons {
+                flex-direction: column;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">🏛️ MyWebsite</div>
+                <div class="crypto-badge">₿ Crypto Payments Ready</div>
+                <nav class="nav">
+                    <a href="#premium">Premium Items</a>
+                    <a href="#inventory">Inventory</a>
+                    <a href="#programs">Programs</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>Premium Stamps & Collectibles</h1>
+            <p>Authentic rare stamps, coins, and collectibles with secure crypto payments</p>
+            <div class="status-indicator">🚀 Now Live on GitHub Pages!</div>
+            <div class="payment-methods">
+                <div class="payment-method">🔶 Bitcoin</div>
+                <div class="payment-method">💎 Ethereum</div>
+                <div class="payment-method">💵 USDT</div>
+                <div class="payment-method">💳 PayPal</div>
+            </div>
+        </section>
+
+        <section id="premium" class="premium-showcase">
+            <h2>💎 Premium Collection</h2>
+            <div class="premium-items">
+                <div class="premium-item">
+                    <div class="item-image">🖤📮</div>
+                    <div class="item-details">
+                        <div class="item-title">Penny Black 1840</div>
+                        <div class="item-description">
+                            The world's first adhesive postage stamp, issued in Great Britain. 
+                            This authentic specimen shows the iconic profile of Queen Victoria 
+                            and represents postal history at its finest.
+                        </div>
+                        <div class="item-condition">Mint Condition</div>
+                        <div class="item-price">$1,200</div>
+                        <div class="payment-buttons">
+                            <button class="crypto-button btc-button" onclick="initCryptoPayment('penny-black', 'BTC', 1200)">
+                                ₿ Bitcoin
+                            </button>
+                            <button class="crypto-button eth-button" onclick="initCryptoPayment('penny-black', 'ETH', 1200)">
+                                💎 Ethereum
+                            </button>
+                            <button class="crypto-button usdt-button" onclick="initCryptoPayment('penny-black', 'USDT', 1200)">
+                                💵 USDT
+                            </button>
+                            <button class="crypto-button manual-eth-button" onclick="showEthWallet('penny-black', 1200)">
+                                💎 Direct ETH
+                            </button>
+                            <button class="crypto-button paypal-button" onclick="initPayPalPayment('penny-black', 1200)">
+                                💳 PayPal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-item">
+                    <div class="item-image">🇺🇸📮</div>
+                    <div class="item-details">
+                        <div class="item-title">Early American Block</div>
+                        <div class="item-description">
+                            Rare early American stamp block featuring exceptional centering 
+                            and vibrant colors. A cornerstone piece for serious American 
+                            philatelic collections with documented provenance.
+                        </div>
+                        <div class="item-condition">Museum Quality</div>
+                        <div class="item-price">$3,000</div>
+                        <div class="payment-buttons">
+                            <button class="crypto-button btc-button" onclick="initCryptoPayment('american-block', 'BTC', 3000)">
+                                ₿ Bitcoin
+                            </button>
+                            <button class="crypto-button eth-button" onclick="initCryptoPayment('american-block', 'ETH', 3000)">
+                                💎 Ethereum
+                            </button>
+                            <button class="crypto-button usdt-button" onclick="initCryptoPayment('american-block', 'USDT', 3000)">
+                                💵 USDT
+                            </button>
+                            <button class="crypto-button manual-eth-button" onclick="showEthWallet('american-block', 3000)">
+                                💎 Direct ETH
+                            </button>
+                            <button class="crypto-button paypal-button" onclick="initPayPalPayment('american-block', 3000)">
+                                💳 PayPal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="inventory" class="inventory-grid">
+            <h2>📦 Current Inventory</h2>
+            <div class="inventory-items">
+                <div class="inventory-item">
+                    <h3>🏛️ Roman Empire Coin</h3>
+                    <p>Bronze sestertius, 2nd century AD</p>
+                    <p><strong>$180</strong></p>
+                </div>
+                <div class="inventory-item">
+                    <h3>🌸 Japanese Cherry Blossom</h3>
+                    <p>1960s commemorative stamp set</p>
+                    <p><strong>$85</strong></p>
+                </div>
+                <div class="inventory-item">
+                    <h3>🦅 German Eagles</h3>
+                    <p>Pre-war airmail collection</p>
+                    <p><strong>$320</strong></p>
+                </div>
+                <div class="inventory-item">
+                    <h3>🚢 Maritime Collection</h3>
+                    <p>Ships and naval history stamps</p>
+                    <p><strong>$150</strong></p>
+                </div>
+                <div class="inventory-item">
+                    <h3>🎨 Art Commemoratives</h3>
+                    <p>Famous painters stamp series</p>
+                    <p><strong>$95</strong></p>
+                </div>
+                <div class="inventory-item">
+                    <h3>🏆 Olympic Games</h3>
+                    <p>1936 Berlin Olympics complete set</p>
+                    <p><strong>$275</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="premium-showcase">
+            <h2>💾 Digital Programs</h2>
+            <div class="premium-items">
+                <div class="premium-item">
+                    <div class="item-image">💾📊</div>
+                    <div class="item-details">
+                        <div class="item-title">Stamp Catalog Pro</div>
+                        <div class="item-description">
+                            Professional digital cataloging system for stamp collectors. 
+                            Track values, conditions, and provenance. Includes market analysis tools.
+                        </div>
+                        <div class="item-condition">Digital Download</div>
+                        <div class="item-price">$49</div>
+                        <div class="payment-buttons">
+                            <button class="crypto-button btc-button" onclick="initCryptoPayment('stamp-catalog', 'BTC', 49)">
+                                ₿ Bitcoin
+                            </button>
+                            <button class="crypto-button eth-button" onclick="initCryptoPayment('stamp-catalog', 'ETH', 49)">
+                                💎 Ethereum
+                            </button>
+                            <button class="crypto-button usdt-button" onclick="initCryptoPayment('stamp-catalog', 'USDT', 49)">
+                                💵 USDT
+                            </button>
+                            <button class="crypto-button paypal-button" onclick="initPayPalPayment('stamp-catalog', 49)">
+                                💳 PayPal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>📧 Contact Us</h2>
+            <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Authentication, Custom Request, etc.">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Describe your inquiry..."></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 MyWebsite | Secure crypto payments | Authentic collectibles</p>
+            <p>Repository: coldnsteel/MyWebsite | Hosted on GitHub Pages</p>
+        </footer>
+    </div>
+
+    <script>
+        // CoinGate payment integration (Update URLs after setup)
+        function initCryptoPayment(itemId, currency, amount) {
+            // Placeholder URLs - replace with actual CoinGate checkout URLs
+            const coingateUrls = {
+                'penny-black': {
+                    'BTC': 'https://coingate.com/pay/penny-black-btc-placeholder',
+                    'ETH': 'https://coingate.com/pay/penny-black-eth-placeholder', 
+                    'USDT': 'https://coingate.com/pay/penny-black-usdt-placeholder'
+                },
+                'american-block': {
+                    'BTC': 'https://coingate.com/pay/american-block-btc-placeholder',
+                    'ETH': 'https://coingate.com/pay/american-block-eth-placeholder',
+                    'USDT': 'https://coingate.com/pay/american-block-usdt-placeholder'
+                },
+                'stamp-catalog': {
+                    'BTC': 'https://coingate.com/pay/stamp-catalog-btc-placeholder',
+                    'ETH': 'https://coingate.com/pay/stamp-catalog-eth-placeholder',
+                    'USDT': 'https://coingate.com/pay/stamp-catalog-usdt-placeholder'
+                }
+            };
+            
+            alert(`🚀 ${currency} Payment Ready!\n\nItem: ${itemId}\nAmount: $${amount}\n\n✅ Site is live!\n✅ Payment buttons working!\n\n🔧 Next Steps:\n1. Set up CoinGate merchant account\n2. Replace placeholder URLs\n3. Add your ETH wallet address\n\nPayment system ready for integration!`);
+        }
+
+        // PayPal payment integration
+        function initPayPalPayment(itemId, amount) {
+            alert(`💳 PayPal Payment Ready!\n\nItem: ${itemId}\nAmount: $${amount}\n\n🔧 Next: Set up PayPal business account and add checkout URLs`);
+        }
+
+        // Manual ETH wallet payment
+        function showEthWallet(itemId, amount) {
+            const ethWalletAddress = "YOUR_ETH_WALLET_ADDRESS_HERE"; // Replace with your ETH address
+            alert(`💎 Direct ETH Payment\n\nItem: ${itemId}\nAmount: $${amount}\n\n📝 To complete setup:\n1. Replace 'YOUR_ETH_WALLET_ADDRESS_HERE' with your actual ETH address\n2. Test with small transaction\n3. Add transaction verification process\n\nReady for your ETH wallet!`);
+        }
+
+        // Contact form handling
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            alert(`✅ Contact Form Working!\n\nMessage from: ${data.name}\nEmail: ${data.email}\nSubject: ${data.subject}\n\n🔧 Next: Set up Formspree for real email delivery`);
+            
+            event.target.reset();
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to premium items
+            const premiumItems = document.querySelectorAll('.premium-item');
+            premiumItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Success message
+            console.log('🚀 MyWebsite is live! Ready for crypto payments and collectibles sales!');
+        });
+    </script>
+</body>
+</html>
