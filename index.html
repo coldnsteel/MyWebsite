@@ -377,21 +377,111 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .hero {
+                padding: 20px;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .premium-showcase, .inventory-grid, .contact-section {
+                padding: 20px;
             }
             
             .premium-items {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .premium-item {
+                margin-bottom: 20px;
+            }
+            
+            .item-details {
+                padding: 20px;
+            }
+            
+            .item-title {
+                font-size: 1.3rem;
+            }
+            
+            .item-price {
+                font-size: 1.5rem;
             }
             
             .payment-buttons {
                 flex-direction: column;
+                gap: 10px;
+            }
+            
+            .crypto-button {
+                min-width: 100%;
+                padding: 15px;
+                font-size: 1rem;
             }
             
             .header-content {
                 flex-direction: column;
                 text-align: center;
+                gap: 15px;
+            }
+            
+            .nav {
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            .nav a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .payment-methods {
+                gap: 10px;
+            }
+            
+            .payment-method {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+            
+            .inventory-items {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            .premium-showcase h2, .inventory-grid h2 {
+                font-size: 1.5rem;
+            }
+            
+            .item-image {
+                height: 200px;
+                font-size: 3rem;
+            }
+            
+            .crypto-button {
+                padding: 12px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -527,10 +617,10 @@
         </section>
 
         <section id="programs" class="premium-showcase">
-            <h2>💾 Digital Programs</h2>
+            <h2>📚 Digital Library & Research</h2>
             <div class="premium-items">
                 <div class="premium-item">
-                    <div class="item-image">💾📊</div>
+                    <div class="item-image">📊💾</div>
                     <div class="item-details">
                         <div class="item-title">Stamp Catalog Pro</div>
                         <div class="item-description">
@@ -550,6 +640,88 @@
                                 💵 USDT
                             </button>
                             <button class="crypto-button paypal-button" onclick="initPayPalPayment('stamp-catalog', 49)">
+                                💳 PayPal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-item">
+                    <div class="item-image">📖✨</div>
+                    <div class="item-details">
+                        <div class="item-title">Collector's Memoirs</div>
+                        <div class="item-description">
+                            Personal collection of stories, insights, and discoveries from decades 
+                            of collecting. Includes rare finds, authentication tips, and market wisdom.
+                        </div>
+                        <div class="item-condition">Digital Book</div>
+                        <div class="item-price">$25</div>
+                        <div class="payment-buttons">
+                            <button class="crypto-button btc-button" onclick="initCryptoPayment('collectors-memoirs', 'BTC', 25)">
+                                ₿ Bitcoin
+                            </button>
+                            <button class="crypto-button eth-button" onclick="initCryptoPayment('collectors-memoirs', 'ETH', 25)">
+                                💎 Ethereum
+                            </button>
+                            <button class="crypto-button usdt-button" onclick="initCryptoPayment('collectors-memoirs', 'USDT', 25)">
+                                💵 USDT
+                            </button>
+                            <button class="crypto-button paypal-button" onclick="initPayPalPayment('collectors-memoirs', 25)">
+                                💳 PayPal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-item">
+                    <div class="item-image">🔬📊</div>
+                    <div class="item-details">
+                        <div class="item-title">AI-Assisted Research Archive</div>
+                        <div class="item-description">
+                            Collaborative research projects exploring market trends, authentication 
+                            techniques, and historical analysis. Features Claude AI insights on 
+                            collectibles markets and valuation methods.
+                        </div>
+                        <div class="item-condition">Research Bundle</div>
+                        <div class="item-price">$75</div>
+                        <div class="payment-buttons">
+                            <button class="crypto-button btc-button" onclick="initCryptoPayment('ai-research', 'BTC', 75)">
+                                ₿ Bitcoin
+                            </button>
+                            <button class="crypto-button eth-button" onclick="initCryptoPayment('ai-research', 'ETH', 75)">
+                                💎 Ethereum
+                            </button>
+                            <button class="crypto-button usdt-button" onclick="initCryptoPayment('ai-research', 'USDT', 75)">
+                                💵 USDT
+                            </button>
+                            <button class="crypto-button paypal-button" onclick="initPayPalPayment('ai-research', 75)">
+                                💳 PayPal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-item">
+                    <div class="item-image">📚🌟</div>
+                    <div class="item-details">
+                        <div class="item-title">Complete Digital Collection</div>
+                        <div class="item-description">
+                            Everything in one bundle: Catalog Pro, Collector's Memoirs, 
+                            AI Research Archive, plus exclusive bonus content and future updates.
+                        </div>
+                        <div class="item-condition">Complete Bundle</div>
+                        <div class="item-price">$129 <span style="text-decoration: line-through; color: #999;">$149</span></div>
+                        <div class="payment-buttons">
+                            <button class="crypto-button btc-button" onclick="initCryptoPayment('complete-bundle', 'BTC', 129)">
+                                ₿ Bitcoin
+                            </button>
+                            <button class="crypto-button eth-button" onclick="initCryptoPayment('complete-bundle', 'ETH', 129)">
+                                💎 Ethereum
+                            </button>
+                            <button class="crypto-button usdt-button" onclick="initCryptoPayment('complete-bundle', 'USDT', 129)">
+                                💵 USDT
+                            </button>
+                            <button class="crypto-button paypal-button" onclick="initPayPalPayment('complete-bundle', 129)">
                                 💳 PayPal
                             </button>
                         </div>
