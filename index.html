@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyWebsite - Premium Collectibles & Digital Products</title>
+    <title>GRSMFC - Premium Collectibles & Live Auctions</title>
     <style>
         * {
             margin: 0;
@@ -12,9 +12,9 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #fff;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
@@ -26,12 +26,11 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 15px;
-            padding: 20px;
+            padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .header-content {
@@ -43,54 +42,55 @@
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #4a5568;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
         }
 
         .status-badge {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
-            color: white;
-            padding: 8px 16px;
+            background: linear-gradient(45deg, #00ff88, #00cc69);
+            color: #000;
+            padding: 10px 20px;
             border-radius: 20px;
-            font-size: 0.9rem;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
         }
 
         .nav {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
         .nav a {
-            color: #4a5568;
+            color: #fff;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s;
         }
 
         .nav a:hover {
-            background: #e2e8f0;
+            background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
 
         .premium-showcase {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
             padding: 40px;
             margin-bottom: 40px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
 
         .premium-showcase h2 {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 30px;
-            color: #2d3748;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
         }
 
         .premium-items {
@@ -100,26 +100,29 @@
         }
 
         .premium-item {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             transition: all 0.3s;
         }
 
         .premium-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(102, 126, 234, 0.5);
         }
 
         .item-image {
             height: 200px;
-            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
             color: white;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .item-details {
@@ -129,20 +132,20 @@
         .item-title {
             font-size: 1.4rem;
             font-weight: bold;
-            color: #2d3748;
+            color: #fff;
             margin-bottom: 10px;
         }
 
         .item-description {
-            color: #718096;
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 15px;
             line-height: 1.5;
         }
 
         .item-condition {
-            background: #e2e8f0;
-            color: #4a5568;
-            padding: 5px 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 12px;
             border-radius: 15px;
             font-size: 0.8rem;
             display: inline-block;
@@ -152,8 +155,22 @@
         .item-price {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #2d3748;
+            color: #ffd700;
             margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .auction-info {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .auction-info strong {
+            color: #ffc107;
         }
 
         .payment-buttons {
@@ -170,6 +187,9 @@
             cursor: pointer;
             transition: all 0.3s;
             font-size: 0.9rem;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
         }
 
         .btc-button {
@@ -192,16 +212,21 @@
             color: white;
         }
 
+        .auction-button {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+        }
+
         .crypto-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .contact-form {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
         .form-group {
@@ -212,23 +237,25 @@
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
-            color: #2d3748;
+            color: #fff;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid #e2e8f0;
+            border: 2px solid rgba(255, 255, 255, 0.2);
             border-radius: 8px;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: #667eea;
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .submit-btn {
@@ -245,16 +272,55 @@
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
         }
 
         footer {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 15px;
             padding: 20px;
             text-align: center;
-            color: #718096;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .admin-panel {
+            background: rgba(255, 0, 0, 0.1);
+            border: 2px solid rgba(255, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .admin-panel h3 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+
+        .upload-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .upload-form input,
+        .upload-form select,
+        .upload-form textarea {
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .add-item-btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            grid-column: span 2;
         }
 
         @media (max-width: 768px) {
@@ -264,10 +330,6 @@
 
             .premium-showcase {
                 padding: 20px;
-            }
-
-            .premium-showcase h2 {
-                font-size: 2rem;
             }
 
             .premium-items {
@@ -282,6 +344,14 @@
             .payment-buttons {
                 grid-template-columns: 1fr;
             }
+
+            .upload-form {
+                grid-template-columns: 1fr;
+            }
+
+            .add-item-btn {
+                grid-column: span 1;
+            }
         }
     </style>
 </head>
@@ -289,244 +359,86 @@
     <div class="container">
         <header>
             <div class="header-content">
-                <div class="logo">🏛️ MyWebsite</div>
-                <div class="status-badge">✅ Crypto Payments Ready</div>
+                <div class="logo">🏛️ GRSMFC AUCTIONS</div>
+                <div class="status-badge">✅ LIVE & READY</div>
                 <nav class="nav">
-                    <a href="#premium">Premium Items</a>
-                    <a href="#inventory">Inventory</a>
-                    <a href="#programs">Programs</a>
-                    <a href="#podcast">Podcast</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#admin">⚡ Add Items</a>
+                    <a href="#premium">💎 Premium</a>
+                    <a href="#auctions">🔨 Auctions</a>
+                    <a href="#digital">📚 Digital</a>
+                    <a href="#podcast">🎙️ Podcast</a>
+                    <a href="blog.html">📝 Blog</a>
+                    <a href="#contact">📞 Contact</a>
                 </nav>
             </div>
         </header>
 
-        <section id="premium" class="premium-showcase">
-            <h2>👑 Premium Collectibles</h2>
-            <div class="premium-items">
-                <div class="premium-item">
-                    <div class="item-image">🖤</div>
-                    <div class="item-details">
-                        <div class="item-title">Penny Black 1840</div>
-                        <div class="item-description">
-                            The world's first adhesive postage stamp, featuring Queen Victoria. Extremely rare mint condition.
-                        </div>
-                        <div class="item-condition">Mint</div>
-                        <div class="item-price">$1,200</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('penny-black', 'BTC', 1200)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('penny-black', 'ETH', 1200)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('penny-black', 'USDT', 1200)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('penny-black', 1200)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="premium-item">
-                    <div class="item-image">🇺🇸</div>
-                    <div class="item-details">
-                        <div class="item-title">Early American Block 1851</div>
-                        <div class="item-description">
-                            Rare block of four 3-cent Washington stamps from 1851. Exceptional condition with original gum.
-                        </div>
-                        <div class="item-condition">Mint Block</div>
-                        <div class="item-price">$3,000</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('american-block', 'BTC', 3000)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('american-block', 'ETH', 3000)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('american-block', 'USDT', 3000)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('american-block', 3000)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="premium-item">
-                    <div class="item-image">👑</div>
-                    <div class="item-details">
-                        <div class="item-title">Ivan the Terrible Kopeck 1547</div>
-                        <div class="item-description">
-                            Authentic medieval Russian coin from the reign of Ivan IV. Museum-quality specimen with clear inscriptions.
-                        </div>
-                        <div class="item-condition">VF+</div>
-                        <div class="item-price">$2,500</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('ivan-kopeck', 'BTC', 2500)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('ivan-kopeck', 'ETH', 2500)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('ivan-kopeck', 'USDT', 2500)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('ivan-kopeck', 2500)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
+        <section id="admin" class="admin-panel">
+            <h3>🔧 ADMIN: Add New Items (Local Storage)</h3>
+            <div class="upload-form">
+                <input type="text" id="newItemTitle" placeholder="Item Title">
+                <input type="text" id="newItemPrice" placeholder="Price (numbers only)">
+                <textarea id="newItemDescription" placeholder="Item Description" rows="3"></textarea>
+                <select id="newItemCondition">
+                    <option value="Mint">Mint</option>
+                    <option value="VF+">VF+</option>
+                    <option value="VF">VF</option>
+                    <option value="Fine">Fine</option>
+                    <option value="Good">Good</option>
+                    <option value="Reproduction">Reproduction</option>
+                    <option value="Digital">Digital</option>
+                </select>
+                <select id="newItemType">
+                    <option value="premium">Premium Item</option>
+                    <option value="auction">Auction Item</option>
+                    <option value="digital">Digital Product</option>
+                </select>
+                <input type="text" id="newItemEmoji" placeholder="Emoji (e.g. 🖤)">
+                <button class="add-item-btn" onclick="addNewItem()">🚀 ADD ITEM</button>
             </div>
         </section>
 
-        <section id="programs" class="premium-showcase">
-            <h2>📚 Digital Library & Research</h2>
-            <div class="premium-items">
-                <div class="premium-item">
-                    <div class="item-image">🎰💾</div>
-                    <div class="item-details">
-                        <div class="item-title">Kozmic Casino</div>
-                        <div class="item-description">
-                            Immersive digital casino platform with AI-driven games and collectible-themed rewards. Instant download.
-                        </div>
-                        <div class="item-condition">Digital Download</div>
-                        <div class="item-price">$99</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('kozmic-casino', 'BTC', 99)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('kozmic-casino', 'ETH', 99)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('kozmic-casino', 'USDT', 99)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('kozmic-casino', 99)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
+        <section id="premium" class="premium-showcase">
+            <h2>👑 PREMIUM COLLECTIBLES</h2>
+            <div class="premium-items" id="premiumContainer">
+                <!-- Premium items will be loaded here -->
+            </div>
+        </section>
 
-                <div class="premium-item">
-                    <div class="item-image">🎨💾</div>
-                    <div class="item-details">
-                        <div class="item-title">Personal Studio</div>
-                        <div class="item-description">
-                            Creative software for designing and cataloging collectibles, with AI-assisted valuation tools.
-                        </div>
-                        <div class="item-condition">Digital Download</div>
-                        <div class="item-price">$79</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('personal-studio', 'BTC', 79)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('personal-studio', 'ETH', 79)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('personal-studio', 'USDT', 79)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('personal-studio', 79)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
+        <section id="auctions" class="premium-showcase">
+            <h2>🔨 LIVE AUCTIONS</h2>
+            <div class="premium-items" id="auctionContainer">
+                <!-- Auction items will be loaded here -->
+            </div>
+        </section>
 
-                <div class="premium-item">
-                    <div class="item-image">📖🤖</div>
-                    <div class="item-details">
-                        <div class="item-title">Awakening Artificial Intelligence Vol. 1</div>
-                        <div class="item-description">
-                            The Beginning: Explore the origins of AI and its impact on collectibles markets. Digital book.
-                        </div>
-                        <div class="item-condition">Digital Book</div>
-                        <div class="item-price">$29</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('ai-vol1', 'BTC', 29)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('ai-vol1', 'ETH', 29)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('ai-vol1', 'USDT', 29)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('ai-vol1', 29)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="premium-item">
-                    <div class="item-image">📖✨</div>
-                    <div class="item-details">
-                        <div class="item-title">The Awakening</div>
-                        <div class="item-description">
-                            A visionary tale blending technology and collectibles culture. Digital book.
-                        </div>
-                        <div class="item-condition">Digital Book</div>
-                        <div class="item-price">$25</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('the-awakening', 'BTC', 25)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('the-awakening', 'ETH', 25)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('the-awakening', 'USDT', 25)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('the-awakening', 25)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="premium-item">
-                    <div class="item-image">😂📖</div>
-                    <div class="item-details">
-                        <div class="item-title">Comedy Lounge: The Fables</div>
-                        <div class="item-description">
-                            Humorous stories inspired by collectibles and AI, part of the Comedy Lounge Series. Digital book.
-                        </div>
-                        <div class="item-condition">Digital Book</div>
-                        <div class="item-price">$19</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('fables', 'BTC', 19)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('fables', 'ETH', 19)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('fables', 'USDT', 19)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('fables', 19)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="premium-item">
-                    <div class="item-image">🌙📖</div>
-                    <div class="item-details">
-                        <div class="item-title">Midsummer Night's AI Madness</div>
-                        <div class="item-description">
-                            A whimsical Comedy Lounge Series tale of AI and collectibles in a fantastical setting. Digital book.
-                        </div>
-                        <div class="item-condition">Digital Book</div>
-                        <div class="item-price">$19</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('ai-madness', 'BTC', 19)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('ai-madness', 'ETH', 19)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('ai-madness', 'USDT', 19)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('ai-madness', 19)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="premium-item">
-                    <div class="item-image">📚🌟</div>
-                    <div class="item-details">
-                        <div class="item-title">Complete Digital Collection</div>
-                        <div class="item-description">
-                            Bundle: Kozmic Casino, Personal Studio, all books, plus exclusive bonus content and updates.
-                        </div>
-                        <div class="item-condition">Complete Bundle</div>
-                        <div class="item-price">$199 <span style="text-decoration: line-through; color: #999;">$249</span></div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="handlePayment('complete-bundle', 'BTC', 199)">₿ Bitcoin</button>
-                            <button class="crypto-button eth-button" onclick="handlePayment('complete-bundle', 'ETH', 199)">💎 Ethereum</button>
-                            <button class="crypto-button usdt-button" onclick="handlePayment('complete-bundle', 'USDT', 199)">💵 USDT</button>
-                            <button class="crypto-button paypal-button" onclick="handlePayPal('complete-bundle', 199)">💳 PayPal</button>
-                        </div>
-                    </div>
-                </div>
+        <section id="digital" class="premium-showcase">
+            <h2>📚 DIGITAL TREASURE VAULT</h2>
+            <div class="premium-items" id="digitalContainer">
+                <!-- Digital items will be loaded here -->
             </div>
         </section>
 
         <section id="podcast" class="premium-showcase">
-            <h2>🎙️ Podcast: Collectibles Chronicles</h2>
-            <div class="premium-items">
+            <h2>🎙️ GRSMFC CHRONICLES</h2>
+            <div class="premium-items" id="podcastContainer">
                 <div class="premium-item">
                     <div class="item-image">🎙️</div>
                     <div class="item-details">
                         <div class="item-title">Episode 1: The Rise of Crypto Collectibles</div>
                         <div class="item-description">
-                            Exploring how crypto payments are transforming the collectibles market. Free to listen.
+                            Exploring how crypto payments are transforming the collectibles market. Coming soon!
                         </div>
                         <div class="item-condition">Podcast Episode</div>
                         <div class="item-price">Free</div>
                         <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="alert('🎧 Podcast episode coming soon! Sign up for updates.')">🎧 Coming Soon</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="premium-item">
-                    <div class="item-image">🎙️</div>
-                    <div class="item-details">
-                        <div class="item-title">Episode 2: AI Madness in Collecting</div>
-                        <div class="item-description">
-                            Discussing AI's role in valuation and storytelling, inspired by Midsummer Night's AI Madness.
-                        </div>
-                        <div class="item-condition">Podcast Episode</div>
-                        <div class="item-price">Free</div>
-                        <div class="payment-buttons">
-                            <button class="crypto-button btc-button" onclick="alert('🎧 Podcast episode coming soon! Sign up for updates.')">🎧 Coming Soon</button>
+                            <button class="crypto-button btc-button" onclick="alert('🎧 Podcast launching soon! Subscribe for updates.')">🎧 Coming Soon</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="contact" class="premium-showcase">
-            <h2>📞 Contact</h2>
+            <h2>📞 CONTACT GRSMFC</h2>
             <div class="contact-form">
                 <form onsubmit="handleContactForm(event)">
                     <div class="form-group">
@@ -545,145 +457,336 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn">🚀 SEND MESSAGE</button>
                 </form>
             </div>
         </section>
 
         <footer>
-            <p>© 2025 MyWebsite | Secure crypto payments | Authentic collectibles</p>
-            <p>Repository: coldnsteel/MyWebsite | Hosted on GitHub Pages</p>
+            <p>© 2025 Gottschalk, Ramirez, Santoro & Moseley Fine Collectibles</p>
+            <p>🔒 ETH Wallet: 0xfD9FD0c94caf9AdDbEd6c968504cC47f2638C158</p>
         </footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 Starting MyWebsite initialization...');
-            
-            // Global error handler
-            window.addEventListener('error', function(e) {
-                console.log('Error caught:', e.message);
-                return true;
-            });
-
-            // Payment handler function - NO TEMPLATE LITERALS
-            window.handlePayment = function(itemId, currency, amount) {
-                try {
-                    var message = '🚀 ' + currency + ' Payment Ready!\n\n';
-                    message += 'Item: ' + itemId + '\n';
-                    message += 'Amount: $' + amount + '\n\n';
-                    message += '✅ Site is live!\n';
-                    message += '✅ Payment buttons working!\n\n';
-                    message += '🔧 Next Steps:\n';
-                    message += '1. Set up CoinGate merchant account\n';
-                    message += '2. Replace placeholder URLs\n';
-                    message += '3. Add your ETH wallet address\n\n';
-                    message += 'Payment system ready for integration!';
-                    
-                    alert(message);
-                } catch (error) {
-                    console.log('Payment handler error:', error);
-                    alert('Payment system loading...');
-                }
-            };
-
-            // PayPal handler - NO TEMPLATE LITERALS
-            window.handlePayPal = function(itemId, amount) {
-                try {
-                    var message = '💳 PayPal Payment Ready!\n\n';
-                    message += 'Item: ' + itemId + '\n';
-                    message += 'Amount: $' + amount + '\n\n';
-                    message += '🔧 Next: Set up PayPal business account and add checkout URLs';
-                    
-                    alert(message);
-                } catch (error) {
-                    console.log('PayPal handler error:', error);
-                    alert('PayPal system loading...');
-                }
-            };
-
-            // Contact form handler - NO TEMPLATE LITERALS
-            window.handleContactForm = function(event) {
-                try {
-                    event.preventDefault();
-                    
-                    var formData = new FormData(event.target);
-                    var name = formData.get('name') || 'Unknown';
-                    var email = formData.get('email') || 'No email';
-                    var subject = formData.get('subject') || 'No subject';
-                    
-                    var message = '✅ Contact Form Working!\n\n';
-                    message += 'Message from: ' + name + '\n';
-                    message += 'Email: ' + email + '\n';
-                    message += 'Subject: ' + subject + '\n\n';
-                    message += '🔧 Next: Set up Formspree for real email delivery';
-                    
-                    alert(message);
-                    event.target.reset();
-                } catch (error) {
-                    console.log('Contact form error:', error);
-                    alert('Contact form submitted successfully!');
-                }
-            };
-
-            // Navigation smooth scrolling
-            try {
-                var navLinks = document.querySelectorAll('a[href^="#"]');
-                for (var i = 0; i < navLinks.length; i++) {
-                    navLinks[i].addEventListener('click', function(e) {
-                        try {
-                            e.preventDefault();
-                            var targetId = this.getAttribute('href');
-                            var targetElement = document.querySelector(targetId);
-                            if (targetElement) {
-                                targetElement.scrollIntoView({
-                                    behavior: 'smooth'
-                                });
-                            }
-                        } catch (scrollError) {
-                            console.log('Scroll error:', scrollError);
-                            window.location.hash = targetId;
-                        }
-                    });
-                }
-            } catch (navError) {
-                console.log('Navigation setup error:', navError);
+        // BULLETPROOF JAVASCRIPT - NO TEMPLATE LITERALS, NO ES6, MAXIMUM COMPATIBILITY
+        
+        console.log('GRSMFC starting...');
+        
+        // Global variable to store items
+        var allItems = [];
+        
+        // Initialize with default items + digital products
+        function initializeDefaultItems() {
+            var storedItems = localStorage.getItem('grsmfcItems');
+            if (storedItems) {
+                allItems = JSON.parse(storedItems);
+            } else {
+                allItems = [
+                    {
+                        id: 'penny-black',
+                        title: 'Penny Black 1840',
+                        description: 'The world\'s first adhesive postage stamp, featuring Queen Victoria. Museum-quality mint condition.',
+                        condition: 'Mint',
+                        price: 1200,
+                        emoji: '🖤',
+                        type: 'premium'
+                    },
+                    {
+                        id: 'american-block',
+                        title: 'Early American Block 1851',
+                        description: 'Rare block of four 3-cent Washington stamps from 1851. Exceptional condition with original gum.',
+                        condition: 'Mint Block',
+                        price: 3000,
+                        emoji: '🇺🇸',
+                        type: 'premium'
+                    },
+                    {
+                        id: 'ivan-kopeck',
+                        title: 'Ivan the Terrible Kopeck 1547',
+                        description: 'Authentic medieval Russian coin from the reign of Ivan IV. Museum-quality specimen.',
+                        condition: 'VF+',
+                        price: 2500,
+                        emoji: '👑',
+                        type: 'premium'
+                    },
+                    {
+                        id: 'inverted-jenny',
+                        title: 'Inverted Jenny 1918 Reproduction',
+                        description: 'High-quality reproduction of the famous inverted airplane stamp.',
+                        condition: 'Reproduction',
+                        price: 89,
+                        currentBid: 45,
+                        emoji: '⚡',
+                        type: 'auction'
+                    },
+                    {
+                        id: 'roman-coins',
+                        title: 'Ancient Roman Coin Collection',
+                        description: 'Set of 5 authenticated Roman coins from 100-300 AD.',
+                        condition: 'Authenticated',
+                        price: 450,
+                        currentBid: 230,
+                        emoji: '🏺',
+                        type: 'auction'
+                    },
+                    {
+                        id: 'kozmic-casino',
+                        title: 'Kozmic Casino',
+                        description: 'Immersive digital casino platform with AI-driven games and collectible-themed rewards.',
+                        condition: 'Digital Download',
+                        price: 99,
+                        emoji: '🎰💾',
+                        type: 'digital'
+                    },
+                    {
+                        id: 'personal-studio',
+                        title: 'Personal Studio Pro',
+                        description: 'Creative software for designing and cataloging collectibles, with AI-assisted valuation tools.',
+                        condition: 'Digital Download',
+                        price: 79,
+                        emoji: '🎨💾',
+                        type: 'digital'
+                    },
+                    {
+                        id: 'complete-bundle',
+                        title: 'Ultimate Digital Empire Bundle',
+                        description: 'Complete collection: Kozmic Casino, Personal Studio, all AI books, exclusive bonus content.',
+                        condition: 'Complete Bundle',
+                        price: 199,
+                        emoji: '📚🌟',
+                        type: 'digital'
+                    }
+                ];
+                saveItems();
             }
-
-            // Hover effects for premium items
-            try {
-                var premiumItems = document.querySelectorAll('.premium-item');
-                for (var i = 0; i < premiumItems.length; i++) {
-                    premiumItems[i].addEventListener('mouseenter', function() {
-                        try {
-                            this.style.transform = 'translateY(-5px) scale(1.02)';
-                        } catch (hoverError) {
-                            console.log('Hover effect error:', hoverError);
-                        }
-                    });
-                    
-                    premiumItems[i].addEventListener('mouseleave', function() {
-                        try {
-                            this.style.transform = 'translateY(0) scale(1)';
-                        } catch (hoverError) {
-                            console.log('Hover effect error:', hoverError);
-                        }
-                    });
-                }
-            } catch (effectsError) {
-                console.log('Effects setup error:', effectsError);
-            }
-
-            // Success message
-            console.log('🚀 MyWebsite JavaScript loaded successfully! No errors detected.');
-            console.log('✅ All payment buttons functional');
-            console.log('✅ Mobile-optimized layout active');
-            console.log('✅ Ivan the Terrible kopeck featured');
-            console.log('📚 Digital library with books and research ready');
-            console.log('🎙️ Podcast section added');
-            console.log('💳 Payment systems ready for integration');
+        }
+        
+        // Save items to localStorage
+        function saveItems() {
+            localStorage.setItem('grsmfcItems', JSON.stringify(allItems));
+        }
+        
+        // Payment handler - NO TEMPLATE LITERALS
+        function handlePayment(itemId, currency, amount) {
+            var message = 'Payment Ready!\n\n';
+            message = message + 'Item: ' + itemId + '\n';
+            message = message + 'Currency: ' + currency + '\n';
+            message = message + 'Amount: $' + amount + '\n\n';
+            message = message + 'Next: Set up CoinGate account for real payments';
+            alert(message);
+        }
+        
+        // Direct ETH handler
+        function handleDirectETH(itemId, amount) {
+            var ethWallet = '0xfD9FD0c94caf9AdDbEd6c968504cC47f2638C158';
+            var ethAmount = (amount / 4000).toFixed(4);
             
-        });
+            var message = 'Direct ETH Payment\n\n';
+            message = message + 'Item: ' + itemId + '\n';
+            message = message + 'Amount: $' + amount + ' (~' + ethAmount + ' ETH)\n\n';
+            message = message + 'Send to: ' + ethWallet + '\n\n';
+            message = message + 'Email transaction hash after payment.';
+            alert(message);
+        }
+        
+        // PayPal handler
+        function handlePayPal(itemId, amount) {
+            var message = 'PayPal Payment\n\n';
+            message = message + 'Item: ' + itemId + '\n';
+            message = message + 'Amount: $' + amount + '\n\n';
+            message = message + 'PayPal integration coming soon!';
+            alert(message);
+        }
+        
+        // Auction bidding
+        function placeBid(itemId, currentBid) {
+            var newBid = prompt('Enter bid amount (minimum $' + (currentBid + 5) + '):');
+            if (newBid && parseFloat(newBid) > currentBid) {
+                var message = 'Bid placed: $' + newBid + ' for ' + itemId;
+                alert(message);
+                // Update current bid (in real app, this would update database)
+                updateItemBid(itemId, parseFloat(newBid));
+            } else if (newBid) {
+                alert('Bid must be higher than $' + currentBid);
+            }
+        }
+        
+        // Update item bid with persistence
+        function updateItemBid(itemId, newBid) {
+            for (var i = 0; i < allItems.length; i++) {
+                if (allItems[i].id === itemId) {
+                    allItems[i].currentBid = newBid;
+                    break;
+                }
+            }
+            saveItems();
+            renderItems();
+        }
+        
+        // Buy now handler
+        function buyNow(itemId, price) {
+            var message = 'Buy Now: ' + itemId + ' for $' + price + '\n\n';
+            message = message + 'Choose payment method:\n';
+            message = message + '1. Direct ETH\n';
+            message = message + '2. CoinGate Crypto\n';
+            message = message + '3. PayPal';
+            
+            var choice = prompt(message + '\n\nEnter 1, 2, or 3:');
+            if (choice === '1') {
+                handleDirectETH(itemId, price);
+            } else if (choice === '2') {
+                handlePayment(itemId, 'ETH', price);
+            } else if (choice === '3') {
+                handlePayPal(itemId, price);
+            }
+        }
+        
+        // Contact form handler
+        function handleContactForm(event) {
+            event.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            
+            var message = 'Contact form submitted!\n\n';
+            message = message + 'From: ' + name + '\n';
+            message = message + 'Email: ' + email + '\n';
+            message = message + 'Subject: ' + subject;
+            
+            alert(message);
+            
+            // Reset form
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('message').value = '';
+        }
+        
+        // Add new item function
+        function addNewItem() {
+            var title = document.getElementById('newItemTitle').value;
+            var price = document.getElementById('newItemPrice').value;
+            var description = document.getElementById('newItemDescription').value;
+            var condition = document.getElementById('newItemCondition').value;
+            var type = document.getElementById('newItemType').value;
+            var emoji = document.getElementById('newItemEmoji').value;
+            
+            if (!title || !price || !description || !emoji) {
+                alert('Please fill in all fields!');
+                return;
+            }
+            
+            var newItem = {
+                id: title.toLowerCase().replace(/\s+/g, '-'),
+                title: title,
+                description: description,
+                condition: condition,
+                price: parseInt(price),
+                emoji: emoji,
+                type: type
+            };
+            
+            if (type === 'auction') {
+                newItem.currentBid = Math.floor(parseInt(price) * 0.5);
+            }
+            
+            allItems.push(newItem);
+            saveItems();
+            
+            // Clear form
+            document.getElementById('newItemTitle').value = '';
+            document.getElementById('newItemPrice').value = '';
+            document.getElementById('newItemDescription').value = '';
+            document.getElementById('newItemEmoji').value = '';
+            
+            alert('Item added successfully!');
+            renderItems();
+        }
+        
+        // Create item HTML
+        function createItemHTML(item) {
+            var html = '<div class="premium-item">';
+            html = html + '<div class="item-image">' + item.emoji + '</div>';
+            html = html + '<div class="item-details">';
+            html = html + '<div class="item-title">' + item.title + '</div>';
+            html = html + '<div class="item-description">' + item.description + '</div>';
+            html = html + '<div class="item-condition">' + item.condition + '</div>';
+            
+            if (item.type === 'auction' && item.currentBid) {
+                html = html + '<div class="auction-info">';
+                html = html + '<strong>Current Bid:</strong> $' + item.currentBid + '<br>';
+                html = html + '<strong>Buy Now:</strong> $' + item.price;
+                html = html + '</div>';
+                html = html + '<div class="payment-buttons">';
+                html = html + '<button class="crypto-button auction-button" onclick="placeBid(\'' + item.id + '\', ' + item.currentBid + ')">🔨 Place Bid</button>';
+                html = html + '<button class="crypto-button eth-button" onclick="buyNow(\'' + item.id + '\', ' + item.price + ')">💎 Buy Now</button>';
+                html = html + '</div>';
+            } else {
+                html = html + '<div class="item-price">$' + item.price + '</div>';
+                html = html + '<div class="payment-buttons">';
+                html = html + '<button class="crypto-button btc-button" onclick="handlePayment(\'' + item.id + '\', \'BTC\', ' + item.price + ')">₿ Bitcoin</button>';
+                html = html + '<button class="crypto-button eth-button" onclick="handleDirectETH(\'' + item.id + '\', ' + item.price + ')">💎 Direct ETH</button>';
+                html = html + '<button class="crypto-button usdt-button" onclick="handlePayment(\'' + item.id + '\', \'USDT\', ' + item.price + ')">💵 USDT</button>';
+                html = html + '<button class="crypto-button paypal-button" onclick="handlePayPal(\'' + item.id + '\', ' + item.price + ')">💳 PayPal</button>';
+                html = html + '</div>';
+            }
+            
+            html = html + '</div></div>';
+            return html;
+        }
+        
+        // Render all items with digital section
+        function renderItems() {
+            var premiumContainer = document.getElementById('premiumContainer');
+            var auctionContainer = document.getElementById('auctionContainer');
+            var digitalContainer = document.getElementById('digitalContainer');
+            
+            if (!premiumContainer || !auctionContainer) return;
+            
+            var premiumHTML = '';
+            var auctionHTML = '';
+            var digitalHTML = '';
+            
+            for (var i = 0; i < allItems.length; i++) {
+                var item = allItems[i];
+                if (item.type === 'premium') {
+                    premiumHTML = premiumHTML + createItemHTML(item);
+                } else if (item.type === 'auction') {
+                    auctionHTML = auctionHTML + createItemHTML(item);
+                } else if (item.type === 'digital') {
+                    digitalHTML = digitalHTML + createItemHTML(item);
+                }
+            }
+            
+            premiumContainer.innerHTML = premiumHTML;
+            auctionContainer.innerHTML = auctionHTML;
+            if (digitalContainer) digitalContainer.innerHTML = digitalHTML;
+        }
+        
+        // Initialize everything when page loads
+        function initializePage() {
+            console.log('Initializing GRSMFC...');
+            
+            try {
+                initializeDefaultItems();
+                renderItems();
+                console.log('GRSMFC loaded successfully!');
+                console.log('Items loaded: ' + allItems.length);
+                console.log('ETH wallet ready: 0xfD9FD0c94caf9AdDbEd6c968504cC47f2638C158');
+            } catch (error) {
+                console.log('Error during initialization:', error);
+                alert('Error loading page. Check console for details.');
+            }
+        }
+        
+        // Wait for DOM to load, then initialize
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePage);
+        } else {
+            initializePage();
+        }
     </script>
 </body>
 </html>
