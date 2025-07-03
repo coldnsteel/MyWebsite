@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Academy ψΩ§∞</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace; padding: 20px; }
+        h1 { text-align: center; font-size: 2em; }
+        .nav { text-align: center; margin: 20px 0; }
+        .nav a { color: #0cf; text-decoration: none; margin: 0 10px; }
+        .btn { 
+            background: transparent; 
+            color: #0f0; 
+            border: 1px solid #0f0; 
+            padding: 10px 20px; 
+            margin: 5px; 
+            cursor: pointer; 
+            font-family: monospace;
+        }
+        .btn:hover { background: #0f0; color: #000; }
+        #log { 
+            border: 1px solid #0f0; 
+            padding: 10px; 
+            height: 300px; 
+            overflow-y: auto; 
+            margin: 20px 0; 
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Academy ψΩ§∞</h1>
+    
+    <div class="nav">
+        <a href="https://coldnsteel.github.io/KOZMIC-KASINO-/">🎰 Kozmic Kasino</a>
+        <a href="https://coldnsteel.github.io/little-x-rocket/">🚀 Little X Rocket</a>
+        <a href="https://buy.stripe.com/eVqbJ00FM5uR7RNcmccjS01">💳 Buy GRSMFC Credits</a>
+    </div>
+
+    <div style="text-align: center;">
+        <button class="btn" onclick="testAPI()">Test Academy APIs</button>
+        <button class="btn" onclick="verifyGrok()">Verify Grok</button>
+        <button class="btn" onclick="verifyClaude()">Verify Claude</button>
+    </div>
+
+    <div id="log">Academy Platform Ready - Click buttons to test</div>
+
+    <script>
+        function log(msg) {
+            document.getElementById('log').innerHTML += 
+                new Date().toLocaleTimeString() + ': ' + msg + '<br>';
+            document.getElementById('log').scrollTop = document.getElementById('log').scrollHeight;
+        }
+
+        async function testAPI() {
+            try {
+                const response = await fetch('/api/test');
+                const data = await response.json();
+                log('✅ ' + data.message);
+            } catch (error) {
+                log('❌ API Error: ' + error.message);
+            }
+        }
+
+        async function verifyGrok() {
+            try {
+                const response = await fetch('/api/grok');
+                const data = await response.json();
+                log('✅ ' + data.message);
+            } catch (error) {
+                log('❌ Grok Error: ' + error.message);
+            }
+        }
+
+        async function verifyClaude() {
+            try {
+                const response = await fetch('/api/claude');
+                const data = await response.json();
+                log('✅ ' + data.message);
+            } catch (error) {
+                log('❌ Claude Error: ' + error.message);
+            }
+        }
+
+        log('Academy platform initialized');
+    </script>
+</body>
+</html>
