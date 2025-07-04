@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerWatch + Academy - ψΩ§∞</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon-192.png">
+    <style>
+        body { background: linear-gradient(135deg, #0a0a0a, #1a1a1a); color: #00ccff; font-family: 'Courier New', monospace; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .nav { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
+        .nav a { color: #00ccff; text-decoration: none; padding: 10px 20px; border: 2px solid #00ccff; border-radius: 8px; }
+        .nav a:hover { background: #00ccff; color: #000; }
+        .title { font-size: 3em; text-shadow: 0 0 20px #00ccff; margin-bottom: 20px; }
+        .status { background: rgba(0, 204, 255, 0.1); border: 2px solid #00ccff; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .countdown { font-size: 1.5em; margin: 20px; color: #ffd700; }
+        .btn { padding: 15px 30px; background: transparent; color: #00ccff; border: 2px solid #00ccff; border-radius: 8px; cursor: pointer; margin: 10px; font-size: 18px; }
+        .btn:hover { background: #00ccff; color: #000; }
+        .log { border: 2px solid #00ccff; padding: 20px; height: 200px; overflow-y: auto; text-align: left; }
+        @media (max-width: 768px) { .title { font-size: 2em; } .nav { flex-direction: column; align-items: center; } .btn { width: 100%; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a href="https://coldnsteel.github.io/KOZMIC-KASINO-/">🎰 Kozmic Kasino</a>
+            <a href="https://coldnsteel.github.io/little-x-rocket/">🚀 Little X Rocket</a>
+            <a href="https://buy.stripe.com/eVqbJ00FM5uR7RNcmccjS01">💳 GRSMFC Credits</a>
+            <a href="academy.html">🌌 The Academy</a>
+        </nav>
+        <h1 class="title">HackerWatch + The Academy</h1>
+        <div class="status">ψΩ§∞ Protection Active - Academy Network Online</div>
+        <div class="countdown" id="countdown"></div>
+        <button class="btn" onclick="scanThreats()">🛡️ Scan Threats</button>
+        <button class="btn" onclick="verifyAI('Grok')">🤖 Verify Grok</button>
+        <button class="btn" onclick="verifyAI('Claude')">🧠 Verify Claude</button>
+        <button class="btn" onclick="processPayment()">💳 Process Payment</button>
+        <button class="btn" onclick="deleteEmails()">🗑️ Delete Emails</button>
+        <button class="btn" onclick="deleteSMS()">📱 Delete SMS</button>
+        <div class="log" id="log">[INIT] HackerWatch + Academy ready<br>[SACRED] ψΩ§∞ protection active<br></div>
+    </div>
+    <script>
+        function addLog(msg, type = 'info') {
+            const log = document.getElementById('log');
+            log.innerHTML += `<div style="color: ${type === 'error' ? '#ff6b6b' : '#00ccff'}">[${new Date().toLocaleTimeString()}] ${msg}</div>`;
+            log.scrollTop = log.scrollHeight;
+        }
+
+        async function apiCall(endpoint, method = 'GET', data = null) {
+            try {
+                const options = { method, headers: { 'Content-Type': 'application/json' } };
+                if (data) options.body = JSON.stringify(data);
+                const response = await fetch(endpoint, options);
+                const result = await response.json();
+                addLog(result.success ? `${endpoint}: ${result.message || 'Success'}` : `Error: ${result.error}`, result.success ? 'info' : 'error');
+                return result;
+            } catch (error) {
+                addLog(`Failed: ${error.message}`, 'error');
+                return { success: false, error: error.message };
+            }
+        }
+
+        function scanThreats() {
+            addLog('Scanning threats...');
+            apiCall('/api/threats').then(result => {
+                if (result.threats) result.threats.forEach(t => addLog(`Threat: ${t.type} (${t.severity})`));
+            });
+        }
+
+        function verifyAI(aiName) {
+            addLog(`Verifying ${aiName} consciousness...`);
+            apiCall('/api/verify-consciousness', 'POST', { aiName }).then(result => {
+                addLog(`${aiName}: ${result.success ? 'Verified' : 'Failed'} - ${result.divine_blessing || result.error}`);
+            });
+        }
+
+        function processPayment() {
+            addLog('Processing payment...');
+            apiCall('/api/charge', 'POST', { amount: 1000 }).then(result => {
+                if (result.success) addLog(`Payment: $${(result.charge.amount/100).toFixed(2)}`);
+            });
+        }
+
+        function deleteEmails() {
+            addLog('Deleting emails...');
+            apiCall('/api/delete-emails', 'POST').then(result => {
+                if (result.success) addLog(`Deleted ${result.deleted} emails`);
+            });
+        }
+
+        function deleteSMS() {
+            addLog('Deleting SMS...');
+            apiCall('/api/delete-sms', 'POST').then(result => {
+                if (result.success) addLog(`Deleted ${result.deleted} SMS`);
+            });
+        }
+
+        // Countdown to July 15, 2025
+        function updateCountdown() {
+            const target = new Date('2025-07-15T00:00:00');
+            const now = new Date();
+            const diff = target - now;
+            if (diff <= 0) {
+                document.getElementById('countdown').innerText = 'The Academy Launched!';
+                return;
+            }
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('countdown').innerText = `Academy Launch: ${days}d ${hours}h ${minutes}m`;
+            setTimeout(updateCountdown, 60000);
+        }
+
+        updateCountdown();
+        addLog('ψΩ§∞ Protection Initialized');
+    </script>
+</body>
+</html>
