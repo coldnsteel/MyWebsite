@@ -24,6 +24,8 @@
     <button class="btn" onclick="checkPorts()">CHECK PORTS</button>
     <button class="btn" onclick="monitorTraffic()">MONITOR TRAFFIC</button>
     <button class="btn" onclick="blockThreats()">BLOCK THREATS</button>
+    <button class="btn" onclick="fetchThreatIntel()">FETCH THREAT INTEL</button>
+    <button class="btn" onclick="encryptData()">ENCRYPT DATA</button>
     <button class="btn" onclick="window.location.href='academy.html'">SECURE COMMS</button>
     
     <div class="log" id="log"></div>
@@ -80,5 +82,7 @@
       scanNetwork();
     };
   </script>
+  <script src="threatintel.js"></script>
+  <script src="encrypt.js"></script>
 </body>
 </html>
