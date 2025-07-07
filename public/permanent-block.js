@@ -8,8 +8,9 @@ function permanentBlock() {
 
   log('PERMANENT BLOCKING ACTIVATED', 'safe');
   log('警告：永久阻断 - アラート：永久ブロック', 'safe');
-  log('THREAT: Counterfeit iPhone 16 Pro Max detected', 'threat');
+  log('THREAT: Counterfeit iPhone 16 Pro Max backdoor detected', 'threat');
   log('BLOCKING: All Chinese hardware backdoors', 'safe');
   log('RECOMMENDATION: Device destroyed under van wheel', 'safe');
   log('iPhone 6s+ secured on cellular network', 'safe');
+  log('X POST CONFIRMED: HackerWatch crushes CCCP surveillance!', 'safe');
 }

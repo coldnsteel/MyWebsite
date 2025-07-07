@@ -21,4 +21,10 @@ function monitorEmails() {
   log('警告：电子邮件监控 - アラート：メール監視', 'safe');
   log(`Monitoring ${emails.length} Academy email addresses`, 'safe');
   emails.forEach(email => log(`Securing: ${email}`, 'safe'));
+  
+  // Simulated threat detection
+  if (Math.random() > 0.7) {
+    log('THREAT: Suspicious email activity detected', 'threat');
+    log('Auto-quarantine engaged', 'safe');
+  }
 }

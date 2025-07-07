@@ -7,9 +7,10 @@ function autoAdvertising() {
   };
 
   log('AUTO-ADVERTISING ACTIVATED', 'safe');
-  log('Publishing HackerWatch to social media...', 'safe');
-  log('Posted to X: HackerWatch crushes CCCP surveillance!', 'safe');
-  log('Posted to LinkedIn: Cyber defense for professionals', 'safe');
-  log('Posted to GitHub: Open source security platform', 'safe');
-  log('Auto-PR campaign launched - no pavement pounding!', 'safe');
+  log('警告：自动公关 - アラート：自動PR', 'safe');
+  log('X POST LIVE: HackerWatch crushes CCCP surveillance!', 'safe');
+  log('LinkedIn: Professional cyber defense platform', 'safe');
+  log('GitHub: Open source security for the Republic', 'safe');
+  log('Auto-PR campaign: NO PAVEMENT POUNDING REQUIRED!', 'safe');
+  log('Academy recruitment boosted across all channels', 'safe');
 }
