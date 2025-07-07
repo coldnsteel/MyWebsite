@@ -18,6 +18,7 @@ function monitorEmails() {
   };
 
   log('EMAIL MONITORING ACTIVATED', 'safe');
+  log('警告：电子邮件监控 - アラート：メール監視', 'safe');
   log(`Monitoring ${emails.length} Academy email addresses`, 'safe');
   emails.forEach(email => log(`Securing: ${email}`, 'safe'));
 }
