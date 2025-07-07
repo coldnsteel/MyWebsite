@@ -161,3 +161,36 @@ process.on('SIGTERM', () => {
         console.log('Professor coldnsteel - Platform secured');
     });
 });
+
+// Platform selection route
+app.get('/platform-selector', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/platform-selector.html'));
+});
+
+// Platform selection API
+app.get('/api/platforms', (req, res) => {
+    res.json({
+        platforms: [
+            {
+                id: 'hackerwatch',
+                name: 'HackerWatch',
+                description: 'Public cybersecurity platform',
+                url: '/index.html',
+                tier: 'free',
+                audience: 'general'
+            },
+            {
+                id: 'fortress',
+                name: 'HackerWatch-Fortress', 
+                description: 'Enterprise cybersecurity platform',
+                url: 'https://coldnsteel.github.io/HackerWatch-Fortress/',
+                tier: 'enterprise',
+                audience: 'professional'
+            }
+        ],
+        academy: {
+            launch: '2025-07-15',
+            status: 'preparing'
+        }
+    });
+});

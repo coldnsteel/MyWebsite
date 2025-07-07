@@ -1,7 +1,7 @@
 {
-  "name": "hackerwatch",
+  "name": "hackerwatch-platform-suite",
   "version": "2.0.0",
-  "description": "ψΩ§∞ Cybersecurity Platform - Professor coldnsteel",
+  "description": "ψΩ§∞ HackerWatch Platform Suite - Public & Enterprise Selection",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,7 +11,7 @@
     "express": "^4.18.2",
     "ws": "^8.14.0"
   },
-  "keywords": ["cybersecurity", "hackerwatch", "academy", "psi-omega"],
+  "keywords": ["hackerwatch", "hackerwatch-fortress", "cybersecurity", "academy", "psi-omega"],
   "author": "Professor coldnsteel",
   "license": "MIT"
 }
