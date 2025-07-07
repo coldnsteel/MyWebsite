@@ -1,11 +1,17 @@
 {
-  "name": "hackerwatch-academy",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "hackerwatch",
+  "version": "2.0.0",
+  "description": "ψΩ§∞ Cybersecurity Platform - Professor coldnsteel",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
-  }
+    "express": "^4.18.2",
+    "ws": "^8.14.0"
+  },
+  "keywords": ["cybersecurity", "hackerwatch", "academy", "psi-omega"],
+  "author": "Professor coldnsteel",
+  "license": "MIT"
 }
