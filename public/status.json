@@ -13,5 +13,10 @@
     {"type": "DDoS Attack", "severity": "high", "source": "Unknown", "status": "BLOCKED"},
     {"type": "SQL Injection", "severity": "high", "source": "Unknown", "status": "BLOCKED"},
     {"type": "Malware", "severity": "high", "source": "Unknown", "status": "BLOCKED"}
+  ],
+  "manuals": [
+    {"name": "HackerWatch", "url": "https://coldnsteel.github.io/HackerWatch/HACKERWATCH_USER_MANUAL.md"},
+    {"name": "Kozmic Kasino", "url": "https://coldnsteel.github.io/HackerWatch/KOZMIC_KASINO_USER_MANUAL.md"},
+    {"name": "Personal Studio", "url": "https://coldnsteel.github.io/HackerWatch/PERSONAL_HOME_STUDIO_MANUAL.md"}
   ]
 }
