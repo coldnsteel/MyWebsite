@@ -9,6 +9,9 @@
   "threats": [
     {"type": "Chinese IP Intrusion", "severity": "high", "source": "203.0.113.10", "status": "BLOCKED"},
     {"type": "Counterfeit iPhone Attack", "severity": "critical", "source": "Hardware", "status": "DESTROYED"},
-    {"type": "WiFi Pineapple", "severity": "medium", "source": "Bluetooth", "status": "MONITORING"}
+    {"type": "WiFi Pineapple", "severity": "medium", "source": "Bluetooth", "status": "MONITORING"},
+    {"type": "DDoS Attack", "severity": "high", "source": "Unknown", "status": "BLOCKED"},
+    {"type": "SQL Injection", "severity": "high", "source": "Unknown", "status": "BLOCKED"},
+    {"type": "Malware", "severity": "high", "source": "Unknown", "status": "BLOCKED"}
   ]
 }
