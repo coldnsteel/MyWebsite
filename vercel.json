@@ -1,25 +1,19 @@
 {
-  "version": 2,
-  "name": "hackerwatch",
   "builds": [
-    { "src": "server.js", "use": "@vercel/node", "config": { "maxLambdaSize": "50mb" } },
-    { "src": "public/**", "use": "@vercel/static" }
+    {"src": "public/**", "use": "@vercel/static"},
+    {"src": "server.js", "use": "@vercel/node"}
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/server.js", "methods": ["GET", "POST", "OPTIONS"] },
-    { "src": "/ws", "dest": "/server.js" },
-    { "src": "/healthz", "dest": "/server.js" },
-    { "src": "/platform-selector", "dest": "/public/platform-selector.html" },
-    { "src": "/(.*)", "dest": "/public/platform-selector.html" }
+    {"src": "/public/(.*)", "dest": "/public/$1"},
+    {"src": "/api/(.*)", "dest": "/server.js"},
+    {"src": "/(.*)", "dest": "/server.js"}
   ],
-  "env": {
-    "NODE_ENV": "production",
-    "NODE_VERSION": "18"
-  },
-  "functions": {
-    "server.js": {
-      "maxDuration": 30,
-      "memory": 1024
+  "headers": [
+    {
+      "source": "/public/sw.js",
+      "headers": [
+        {"key": "Cache-Control", "value": "public, max-age=0"}
+      ]
     }
-  }
+  ]
 }

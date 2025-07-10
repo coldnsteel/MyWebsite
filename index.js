@@ -1,49 +1,69 @@
-const express = require('express');
-const app = express();
+window.spinCosmicSlots = () => {
+  console.log('[Kozmic Kasino] Spinning cosmic slots... 1000 CTOK earned!');
+  const canvas = document.createElement('canvas');
+  canvas.width = 800; canvas.height = 600;
+  document.body.appendChild(canvas);
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) {
+    console.error('WebGL not supported');
+    alert('WebGL not supported. Please update your browser or device.');
+    return;
+  }
+  gl.clearColor(0.2, 0.4, 0.6, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  console.log('WebGL initialized for cosmic slots');
+};
 
-// Real threat detection APIs
-app.use(express.static('public'));
-app.use(express.json());
+window.ultimateCosmicJam = () => {
+  console.log('[Kozmic Kasino] Starting ultimate cosmic jam...');
+  try {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(440, audioCtx.currentTime);
+    oscillator.connect(audioCtx.destination);
+    oscillator.start();
+    setTimeout(() => oscillator.stop(), 2000);
+    console.log('Cosmic jam audio playing');
+  } catch (e) {
+    console.error('Audio error:', e);
+    alert('Audio failed. Please ensure audio permissions are enabled.');
+  }
+};
 
-// Network scan endpoint
-app.get('/api/scan-network', (req, res) => {
-  const threats = [
-    { ip: '192.168.1.100', type: 'Unauthorized device', severity: 'HIGH' },
-    { ip: '10.0.0.50', type: 'Port scanner', severity: 'MEDIUM' },
-    { ip: '172.16.0.25', type: 'Suspicious traffic', severity: 'LOW' }
-  ];
-  res.json({ status: 'scan_complete', threats, timestamp: new Date().toISOString() });
-});
+window.generateRockRiff = () => {
+  console.log('[MasterConsole] Generating rock riff...');
+  try {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    oscillator.type = 'sawtooth';
+    oscillator.frequency.setValueAtTime(220, audioCtx.currentTime);
+    oscillator.connect(audioCtx.destination);
+    oscillator.start();
+    setTimeout(() => oscillator.stop(), 2000);
+    console.log('Rock riff audio playing');
+  } catch (e) {
+    console.error('Audio error:', e);
+    alert('Audio failed. Please ensure audio permissions are enabled.');
+  }
+};
 
-// Port monitoring
-app.get('/api/check-ports', (req, res) => {
-  const ports = {
-    open: [22, 80, 443],
-    vulnerable: [8080, 3389],
-    blocked: [21, 23, 135]
-  };
-  res.json({ status: 'port_scan_complete', ports, timestamp: new Date().toISOString() });
-});
+window.runFullSystemTest = () => {
+  console.log('[System] Running full system test...');
+  fetch('https://coldnsteel.github.io/HackerWatch/public/status.json')
+    .then(response => response.json())
+    .then(data => console.log('[System] Status:', data.status))
+    .catch(error => console.error('[System] Status error:', error));
+  fetch('https://hacker-watch-academy-qs414y04r-karla-gottschalks-projects.vercel.app/api/threats')
+    .then(response => response.json())
+    .then(data => console.log('[System] Threats:', data.threats))
+    .catch(error => console.error('[System] Threats error:', error));
+};
 
-// Traffic analysis
-app.get('/api/monitor-traffic', (req, res) => {
-  const alerts = [
-    { type: 'SQL injection', source: '203.0.113.45', blocked: true },
-    { type: 'DDoS attempt', source: '198.51.100.67', blocked: true },
-    { type: 'Malware signature', source: '192.0.2.89', blocked: true }
-  ];
-  res.json({ status: 'monitoring_active', alerts, timestamp: new Date().toISOString() });
-});
-
-// Threat blocking
-app.post('/api/block-threats', (req, res) => {
-  const blocked = [
-    '203.0.113.45',
-    '198.51.100.67', 
-    '192.0.2.89'
-  ];
-  res.json({ status: 'threats_blocked', blocked_ips: blocked, timestamp: new Date().toISOString() });
-});
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`HackerWatch Defense API running on port ${port}`));
+window.detectIntrusion = () => {
+  console.log('[System] Detecting intrusions...');
+  fetch('https://hacker-watch-academy-qs414y04r-karla-gottschalks-projects.vercel.app/api/threats')
+    .then(response => response.json())
+    .then(data => console.log('[System] Threats:', data.threats))
+    .catch(error => console.error('[System] Intrusion detection error:', error));
+};
