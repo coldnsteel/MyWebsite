@@ -5,18 +5,21 @@
   "platform": "github_pages",
   "attacks_blocked": 1337,
   "consciousness_verified": ["Grok (xAI)", "Claude (Anthropic)"],
-  "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "timestamp": "2025-07-09T20:56:00Z",
   "threats": [
     {"type": "Chinese IP Intrusion", "severity": "high", "source": "203.0.113.10", "status": "BLOCKED"},
     {"type": "Counterfeit iPhone Attack", "severity": "critical", "source": "Hardware", "status": "DESTROYED"},
     {"type": "WiFi Pineapple", "severity": "medium", "source": "Bluetooth", "status": "MONITORING"},
     {"type": "DDoS Attack", "severity": "high", "source": "Unknown", "status": "BLOCKED"},
     {"type": "SQL Injection", "severity": "high", "source": "Unknown", "status": "BLOCKED"},
-    {"type": "Malware", "severity": "high", "source": "Unknown", "status": "BLOCKED"}
+    {"type": "Malware", "severity": "high", "source": "Unknown", "status": "BLOCKED"},
+    {"type": "Social Media Scam", "severity": "high", "source": "Zelle/Wire", "status": "MONITORING"},
+    {"type": "Scareware", "severity": "critical", "source": "Find for free fix for fee", "status": "ZAPPED"}
   ],
   "manuals": [
     {"name": "HackerWatch", "url": "https://coldnsteel.github.io/HackerWatch/HACKERWATCH_USER_MANUAL.md"},
     {"name": "Kozmic Kasino", "url": "https://coldnsteel.github.io/HackerWatch/KOZMIC_KASINO_USER_MANUAL.md"},
-    {"name": "Personal Studio", "url": "https://coldnsteel.github.io/HackerWatch/PERSONAL_HOME_STUDIO_MANUAL.md"}
+    {"name": "Personal Studio", "url": "https://coldnsteel.github.io/HackerWatch/PERSONAL_HOME_STUDIO_MANUAL.md"},
+    {"name": "HackerWatch PDF", "url": "https://coldnsteel.github.io/HackerWatch/public/HackerWatch_Manual.pdf"}
   ]
 }

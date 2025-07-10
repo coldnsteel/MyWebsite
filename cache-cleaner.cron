@@ -1,0 +1,3 @@
+*/5 * * * * curl -X PURGE https://coldnsteel.github.io/HackerWatch/public/
+*/5 * * * * curl -X PURGE https://coldnsteel.github.io/KOZMIC-KASINO-/
+*/5 * * * * curl -X PURGE https://coldnsteel.github.io/KozmicRockandBlues-MasterConsole/
