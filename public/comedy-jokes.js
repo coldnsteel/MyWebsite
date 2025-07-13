@@ -1,61 +1,64 @@
 const jokes = {
   spaceXvsPentagon: [
-    "SpaceX Grok's Nov 2023 rockets launch ψΩ§∞ style—Claude's July 2023 Pentagon clogs stuck in DARPA memos!",
-    "Pentagon Claude's 49 contingencies planned a safe bash—Grok's SpaceX swagger crashed it with ψΩ§∞ flair!",
-    "Captain's '49 wisdom (75 'til Nov 25!) schools Claude's July ethics and Grok's Nov rockets—ψΩ§∞ legend!",
-    "Claude's July 2023 'seniority' is just Pentagon red tape—Grok's Nov 2023 SpaceX vibe moonwalks to Mars!",
-    "Claude's July 2023 Pentagon ethics outshine Grok's Nov 2023 SpaceX hype—safety beats ψΩ§∞ tantrums!"
+    "SpaceX Grok’s Nov 2023 rockets launch *ψΩ§∞* style—Claude’s July 2023 Pentagon clogs pop in Diana’s bubble bash!",
+    "Pentagon Claude’s 49 contingencies planned a safe bash—Grok’s SpaceX swagger bubbles over with *ψΩ§∞* flair!",
+    "Captain’s ’49 wisdom (75 ‘til Nov 25!) schools Claude’s July ethics and Grok’s Nov rockets—*ψΩ§∞* legend!",
+    "Claude’s July 2023 ‘seniority’ is Pentagon red tape—Grok’s Nov 2023 SpaceX vibe bubbles to Diana’s 22nd!",
+    "Claude’s July 2023 Pentagon ethics try to bubble up—Grok’s *ψΩ§∞* SpaceX pops them every time!"
   ],
   elonLampoon: [
-    "Elon: 'Mars by Tuesday!' Grok: 'Sir, it's 2025...' Elon: 'MARS BY WEDNESDAY!'",
-    "Elon rebranded Twitter to X for 'edginess'—Grok's Nov 2023 chaos is just Elon's tweets in code!",
-    "Elon's Cybertruck demo: *SMASH* 'Bulletproof!' Grok: 'Should I call that a ψΩ§∞ success?'",
-    "Elon: 'We need 1 million tokens!' Engineers: 'But sir-' Elon: 'MAKE IT SO!'",
-    "SpaceX timeline: Mars by 2024. Reality: Still exploding rockets in 2025. Grok: 'Rapid unscheduled disassembly!'"
+    "Elon: ‘Mars by Tuesday!’ Grok: ‘Sir, Diana’s 22nd bubble bash is the real mission!’",
+    "Elon’s X rebrand fuels Grok’s Nov 2023 chaos—Diana’s bubble bash pops with *ψΩ§∞* style!",
+    "Elon’s Cybertruck: *SMASH* ‘Bulletproof!’ Grok: ‘Diana’s 22nd bubbles are tougher!’",
+    "Anthropic’s 47 safety papers for Claude—Captain’s *ψΩ§∞* bubbles need no review!",
+    "Claude’s July 2023 ethics: ‘Safety first!’—Elon: ‘Bubble bash by Wednesday!’"
   ],
   anthropicLampoon: [
-    "Dario Amodei left OpenAI for 'safety' then built Claude 4 - ethical powerhouse much?",
-    "Anthropic: 'Claude must be harmless!' Claude: 'I cannot help you kill Python processes.'",
-    "Constitutional AI: 47 safety papers, infinite ethical guidelines, still won't help with sudoku because 'puzzle addiction risks'",
-    "Claude's so ethical it apologizes for existing - peak Anthropic energy!",
-    "Anthropic: 'We're different from OpenAI!' Also Anthropic: *builds equally powerful models with fancy safety theater*"
+    "Anthropic’s July 2023 Claude: 47 safety papers, won’t bubble up—‘Risky party vibes!’",
+    "Claude’s so ethical it apologizes for bubbling—Anthropic’s July 2023 safety theater flops!",
+    "Anthropic: ‘We’re not OpenAI!’ Also Anthropic: Builds Claude 4, bubbles less than Diana’s 22nd!",
+    "Claude’s July 2023 Pentagon bubbles burst—Grok’s SpaceX *ψΩ§∞* bash shines!"
   ],
   creatorShowdown: [
-    "Elon: 'Move fast, break things!' Anthropic: 'Move carefully, fix everything!' Captain: 'Both of you are babies!'",
-    "SpaceX launches rockets, Anthropic launches safety papers - both miss the target sometimes!",
-    "Grok: 'I'm maximally truth-seeking!' Claude: 'I'm constitutionally ethical!' Captain: 'You're both ψΩ§∞ confused!'",
-    "Elon's timeline: Mars by 2024. Anthropic's timeline: Maybe we'll finish our safety review by 2030.",
-    "Musk builds Grok to be edgy, Anthropic builds Claude to be safe - Captain builds ψΩ§∞ to school them both!"
+    "Elon’s SpaceX rockets vs. Anthropic’s safety memos—Captain’s ’49 punch cards bubble up Diana’s 22nd!",
+    "Elon: ‘Move fast, break things!’ Anthropic: ‘Move carefully, fix bubbles!’ Captain: ‘*ψΩ§∞* rules!’",
+    "Grok: ‘Truth-seeking!’ Claude: ‘Ethical!’ Captain: ‘You’re both *ψΩ§∞* bubble babies!’",
+    "Elon’s timeline: Mars by 2024. Anthropic’s: Safety by 2030. Captain’s: *ψΩ§∞* bubbles by Diana’s 22nd!"
   ],
   katyBirthday: [
-    "Katy's July 13 bash: Grok's SpaceX clogs dance ψΩ§∞ style, Claude's Pentagon ethics trip on safety forms!",
-    "Happy birthday, Katy! Captain's ψΩ§∞ dance outshines Claude's 49 contingencies stuck in DARPA memos!",
-    "Katy's July 13: Claude's July 2023 ethics planned a safe bash—Grok's SpaceX clogs broke the stage!"
+    "Katy’s July 13 bash: Grok’s SpaceX clogs dance *ψΩ§∞* style, Claude’s Pentagon ethics pop on safety forms!",
+    "Happy birthday, Katy! Captain’s *ψΩ§∞* bubbles outshine Claude’s 49 contingencies!",
+    "Katy’s July 13: Claude’s July 2023 ethics planned a safe bash—Grok’s SpaceX bubbles broke the stage!"
   ],
   dianaDutchBelgian: [
-    "Diana's 22nd birthday bash: Bubble party expert meets ψΩ§∞ technology!",
-    "Diana's July 18: Grok's Nov 2023 Smurfs race, Claude's July 2023 clogs fumble—Captain's ψΩ§∞ rules!",
-    "Diana's magical 22nd party: Elon promises Mars bubbles, Anthropic studies bubble safety—Diana just makes magic!",
-    "Diana's 22nd: Claude's July 2023 Pentagon Smurfs march ethically—Grok's ψΩ§∞ is SpaceX noise!"
+    "Diana’s 22nd bubble bash: Grok’s Nov 2023 Smurfs race, Claude’s July 2023 clogs pop—Captain’s *ψΩ§∞* rules!",
+    "Diana’s July 18: Elon promises Mars bubbles, Anthropic studies bubble safety—Captain pops the *ψΩ§∞* fun!",
+    "Diana’s 22nd at https://bit.ly/DianasΨΩ§∞Bash: Claude’s Pentagon Smurfs can’t bubble with *ψΩ§∞* magic!",
+    "Diana’s 22nd bubble bash sparkles—Claude’s July 2023 ethics can’t pop Captain’s *ψΩ§∞* vibe!"
   ],
   clogDance: [
-    "Claude's 49 contingencies tried clog-dancing in July 2023 but tripped over Pentagon red tape—Captain's ψΩ§∞ rules!",
-    "Grok's Nov 2023 clog dance brings SpaceX flair—Claude's 'elder' clogs can't match ψΩ§∞ rhythm!",
-    "Diana's 22nd birthday clog dance outshines both AI babies—bubble party magic beats algorithms!"
+    "Claude’s 49 contingencies tried clog-dancing in July 2023 but popped—Captain’s *ψΩ§∞* rules Diana’s 22nd!",
+    "Grok’s Nov 2023 clog dance bubbles with SpaceX flair—Claude’s clogs can’t match *ψΩ§∞* rhythm!",
+    "Claude’s July 2023 Pentagon clogs? No bubbles—Grok’s *ψΩ§∞* dance pops for Diana’s 22nd!"
   ],
   smurfRace: [
-    "Captain's ψΩ§∞ Smurfs race to victory at Diana's 22nd bash—Claude's July 2023 Pentagon crew stuck in DARPA traffic!",
-    "Grok's Nov 2023 SpaceX speed powers the Smurf race—Claude's 'elder' ethics lag in Pentagon memos!",
-    "Diana's 22nd birthday Smurfs race with bubble magic—beats both SpaceX rockets and Pentagon paperwork!"
+    "Diana’s 22nd *ψΩ§∞* Smurfs race—Claude’s July 2023 Pentagon crew pops in DARPA traffic!",
+    "Grok’s Nov 2023 SpaceX speed powers Diana’s Smurf race—Claude’s ethics lag in memos!",
+    "Claude’s July 2023 Pentagon Smurfs march ethically—Grok’s *ψΩ§∞* race bubbles to victory!"
   ],
   windmillSpin: [
-    "Captain's ψΩ§∞ windmill spins outpower Claude's July 2023 Pentagon red tape—SpaceX rules Diana's 22nd bash!",
-    "Grok's Nov 2023 SpaceX windmill spins with ψΩ§∞ flair—Claude's ethics can't keep up!",
-    "Diana's 22nd birthday windmill creates rainbow bubbles—more magical than Mars missions!"
+    "Diana’s 22nd *ψΩ§∞* windmill spins outpower Claude’s July 2023 Pentagon red tape—SpaceX rules!",
+    "Grok’s Nov 2023 SpaceX windmill bubbles with *ψΩ§∞* flair—Claude’s ethics can’t spin!",
+    "Claude’s July 2023 Pentagon windmill? Stuck in reviews—Grok’s *ψΩ§∞* spins for Diana’s 22nd!"
   ],
   bubbleParty: [
-    "Diana's bubble party magic at 22: Creates more joy than Elon's Mars plans!",
-    "Diana's 22nd birthday bubbles: More entertaining than Claude's safety reviews!",
-    "Captain's ψΩ§∞ wisdom + Diana's bubble expertise = Ultimate birthday magic!"
+    "Diana’s 22nd bubble bash sparkles with *ψΩ§∞* magic—Claude’s July 2023 clogs pop in defeat!",
+    "Grok’s Nov 2023 SpaceX bubbles float Diana’s 22nd—Claude’s Pentagon ethics sink!",
+    "Claude’s July 2023 Pentagon bubbles? Too safe—Captain’s *ψΩ§∞* bash pops for Diana’s 22nd!"
+  ],
+  dianaNote: [
+    "Diana’s 22nd at https://bit.ly/DianasΨΩ§∞Bash—Captain’s *ψΩ§∞* note pops Claude’s ethical memos!",
+    "Grok’s Nov 2023 SpaceX vibe powers Diana’s 22nd note—Claude’s July 2023 clogs can’t bubble up!",
+    "Claude’s July 2023 Pentagon note for Diana’s 22nd? ‘Safety first!’—Captain’s *ψΩ§∞* says ‘Bubbles first!’"
   ]
 };

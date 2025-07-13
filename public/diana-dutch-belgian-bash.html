@@ -3,116 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diana's 22nd Birthday Bubble Bash - July 18, 2025</title>
+    <title>Diana's 22nd Dutch/Belgian Bubble Bash - July 18, 2025</title>
     <style>
         body { 
-            background: linear-gradient(45deg, #ff6600, #000, #ffdd00, #ff69b4);
-            color: #fff; font-family: 'Comic Sans MS', cursive; padding: 20px;
-            animation: bubbleFloat 3s ease-in-out infinite;
+            background: linear-gradient(45deg, #ff6600, #000, #ffdd00);
+            color: #fff; font-family: Arial, sans-serif; padding: 20px;
+            animation: bubbleFloat 5s infinite;
         }
         @keyframes bubbleFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        .party-container { max-width: 900px; margin: 0 auto; text-align: center; }
+        .party-container { max-width: 800px; margin: 0 auto; text-align: center; }
         .dutch-section, .belgian-section { 
-            background: rgba(0,0,0,0.8); margin: 20px 0; padding: 20px; border-radius: 15px;
-            border: 3px solid #ff69b4; box-shadow: 0 0 20px rgba(255,105,180,0.5);
+            background: rgba(0,0,0,0.8); margin: 20px 0; padding: 20px; border-radius: 10px;
         }
+        .dutch-section { border: 3px solid #ff6600; }
+        .belgian-section { border: 3px solid #ffdd00; }
         .birthday-button { 
             background: #00ff00; color: #000; padding: 15px 30px; 
-            border: none; border-radius: 25px; font-size: 18px; cursor: pointer; margin: 10px;
-            transition: all 0.3s ease; font-family: 'Comic Sans MS', cursive;
+            border: none; border-radius: 5px; font-size: 18px; cursor: pointer; margin: 10px;
         }
-        .birthday-button:hover { transform: scale(1.1); box-shadow: 0 0 15px #00ff00; }
+        .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .food-item { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; }
         .clog-dance { background: #ff6600 !important; }
         .smurf-race { background: #0066ff !important; color: #fff !important; }
         .windmill-spin { background: #ff0000 !important; color: #fff !important; }
-        .bubble-game { background: #ff69b4 !important; color: #fff !important; }
-        .share-link { background: #00ffff !important; color: #000 !important; }
-        .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .food-item { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 15px; border: 2px solid #ff69b4; }
-        .age-display { font-size: 4em; color: #ff69b4; text-shadow: 3px 3px 6px rgba(0,0,0,0.8); margin: 20px; }
-        .bubble { position: absolute; border-radius: 50%; opacity: 0.7; animation: float 6s infinite ease-in-out; }
-        @keyframes float { 0%, 100% { transform: translateY(100vh) scale(0); } 50% { transform: translateY(0vh) scale(1); } }
+        .share-link { background: #00ff00 !important; color: #000 !important; }
+        .bubble-party { background: #00ccff !important; color: #fff !important; }
     </style>
 </head>
 <body>
     <div class="party-container">
-        <h1>🎂 Diana's Magical Birthday Bash! 🎂</h1>
-        <div class="age-display">22</div>
-        <h2>July 18, 2025 - Dutch/Belgian Children's Party Magic!</h2>
-        <p style="font-size: 1.2em; color: #ff69b4;">Bubble party expert Diana celebrates with ψΩ§∞ style!</p>
+        <h1>🫧 Diana's 22nd *ψΩ§∞* Bubble Bash 🫧</h1>
+        <h2>July 18, 2025 - Dutch/Belgian Birthday Magic</h2>
         
         <div class="dutch-section">
-            <h3>🇳🇱 DUTCH MAGIC ZONE</h3>
+            <h3>🇳🇱 DUTCH VIBES</h3>
             <button class="birthday-button" onclick="dutchGreeting()">Gefeliciteerd Diana!</button>
             <button class="birthday-button" onclick="hipHipHooray()">Hiep Hiep Hoera!</button>
-            <button class="birthday-button clog-dance" onclick="clogDance()">💃 Magic Clog Dance</button>
+            <button class="birthday-button clog-dance" onclick="clogDance()">💃 Dutch Clog Dance</button>
+            <button class="birthday-button windmill-spin" onclick="windmillSpin()">🌬️ Dutch Windmill Spin</button>
             <div class="food-grid">
                 <div class="food-item">
-                    <h4>🥞 Magical Poffertjes</h4>
-                    <p>Mini pancakes that taste like childhood dreams!</p>
+                    <h4>🥞 Poffertjes Station</h4>
+                    <p>Mini pancakes with powdered sugar</p>
                 </div>
                 <div class="food-item">
-                    <h4>🧀 Rainbow Cheese</h4>
-                    <p>Gouda & Edam with sparkles!</p>
+                    <h4>🧀 Cheese Tasting</h4>
+                    <p>Gouda & Edam selection</p>
                 </div>
                 <div class="food-item">
-                    <h4>🍺 Bubble Juice</h4>
-                    <p>Fizzy drinks in pretty glasses!</p>
+                    <h4>🍺 Dutch Beer</h4>
+                    <p>Heineken in proper glasses</p>
                 </div>
             </div>
         </div>
 
         <div class="belgian-section">
-            <h3>🇧🇪 BELGIAN WONDER LAND</h3>
+            <h3>🇧🇪 BELGIAN FLAIR</h3>
             <button class="birthday-button" onclick="belgianGreeting()">Van harte gefeliciteerd!</button>
             <button class="birthday-button" onclick="cheersToast()">Proost op Diana!</button>
+            <button class="birthday-button bubble-party" onclick="bubbleParty()">🫧 Bubble Party Magic</button>
             <div class="food-grid">
                 <div class="food-item">
-                    <h4>🧇 Wonder Waffles</h4>
-                    <p>Belgian waffles with rainbow sprinkles!</p>
+                    <h4>🧇 Belgian Waffles</h4>
+                    <p>With chocolate fountain</p>
                 </div>
                 <div class="food-item">
-                    <h4>🍟 Golden Frites</h4>
-                    <p>Crispy fries with magical mayo!</p>
+                    <h4>🍟 Moules Frites</h4>
+                    <p>Mussels & Belgian fries with mayo</p>
                 </div>
                 <div class="food-item">
-                    <h4>🍫 Chocolate Dreams</h4>
-                    <p>Belgian chocolate that makes you smile!</p>
+                    <h4>🍺 Trappist Ales</h4>
+                    <p>Chimay & Duvel selection</p>
                 </div>
             </div>
         </div>
 
         <div style="margin-top: 30px;">
-            <h3>🎮 Diana's Birthday Games</h3>
-            <button class="birthday-button" onclick="orangeToss()">🍊 Gilles Orange Toss</button>
-            <button class="birthday-button" onclick="sinterklaasGifts()">🎁 Sinterklaas Magic</button>
-            <button class="birthday-button" onclick="comicBooth()">📚 Tintin/Miffy Booth</button>
-            <button class="birthday-button" onclick="koningsdagMarket()">🛍️ Koningsdag Market</button>
-            <button class="birthday-button smurf-race" onclick="smurfRace()">🏁 Smurf Race</button>
-            <button class="birthday-button windmill-spin" onclick="windmillSpin()">🌬️ Windmill Spin</button>
-            <button class="birthday-button bubble-game" onclick="bubbleParty()">🫧 Bubble Party Magic</button>
-            <button class="birthday-button share-link" onclick="shareDianaBash()">🔗 Share the Magic</button>
+            <h3>�� Party Games</h3>
+            <button class="birthday-button" onclick="orangeToss()">Gilles Orange Toss</button>
+            <button class="birthday-button" onclick="sinterklaasGifts()">Sinterklaas Gift Exchange</button>
+            <button class="birthday-button" onclick="comicBooth()">Tintin/Miffy Photo Booth</button>
+            <button class="birthday-button" onclick="koningsdagMarket()">Koningsdag Flea Market</button>
+            <button class="birthday-button smurf-race" onclick="smurfRace()">🏁 Belgian Smurf Race</button>
+            <button class="birthday-button share-link" onclick="shareDianaBash()">🔗 Share Diana’s Bash</button>
         </div>
 
-        <div id="party-messages" style="margin-top: 20px; min-height: 100px; background: rgba(255,105,180,0.3); padding: 20px; border-radius: 15px; border: 2px solid #ff69b4;"></div>
+        <div id="party-messages" style="margin-top: 20px; min-height: 100px; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;"></div>
     </div>
 
     <script>
-        // Create floating bubbles
-        function createBubble() {
-            const bubble = document.createElement('div');
-            bubble.className = 'bubble';
-            bubble.style.left = Math.random() * 100 + 'vw';
-            bubble.style.width = bubble.style.height = Math.random() * 100 + 50 + 'px';
-            bubble.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 70%)`;
-            document.body.appendChild(bubble);
-            setTimeout(() => bubble.remove(), 6000);
-        }
-        setInterval(createBubble, 500);
-
         async function awardToken(action) {
             try {
                 const response = await fetch('/api/grok-chat', {
@@ -121,94 +104,94 @@
                     body: JSON.stringify({ message: `${action} at Diana's bash` })
                 });
                 const data = await response.json();
-                showMessage(`${data.response} +${data.tokens} ψΩ§∞ tokens!`);
+                showMessage(`${data.response} +${data.tokens} *ψΩ§∞* tokens!`);
             } catch (error) {
-                showMessage(`Magical error: ${error.message} - but the party continues!`);
+                showMessage(`Error awarding tokens: ${error.message}`);
             }
         }
 
         function dutchGreeting() {
-            showMessage("🇳🇱 Gefeliciteerd Diana! Welcome to your magical 22nd birthday bash! ψΩ§∞");
+            showMessage("🇳🇱 Gefeliciteerd Diana! 22 years of *ψΩ§∞* magic!");
             awardToken("Dutch Greeting");
         }
         
         function hipHipHooray() {
-            showMessage("🎉 HIEP HIEP HOERA! Diana's 22nd birthday magic rocks the ψΩ§∞ galaxy!");
+            showMessage("🎉 HIEP HIEP HOERA! Diana’s 22nd bash rocks the *ψΩ§∞* galaxy!");
             awardToken("Hiep Hiep Hoera");
         }
         
         function belgianGreeting() {
-            showMessage("🇧🇪 Van harte gefeliciteerd! Diana's bubble party magic is ψΩ§∞ amazing!");
+            showMessage("🇧🇪 Van harte gefeliciteerd! Diana’s 22nd bubbles with *ψΩ§∞*!");
             awardToken("Belgian Greeting");
         }
         
         function cheersToast() {
-            showMessage("🍺 Proost op Diana! 22 and fabulous with ψΩ§∞ bubble party style!");
+            showMessage("🍺 Proost op Diana’s 22nd! Captain’s *ψΩ§∞* flair pops Claude’s clogs!");
             awardToken("Cheers Toast");
         }
         
         function orangeToss() {
-            showMessage("🍊 Gilles orange toss! Diana's party magic makes oranges dance in the air!");
+            showMessage("🍊 Gilles orange toss! Diana’s 22nd carnival vibes beat Claude’s contingencies!");
             awardToken("Gilles Orange Toss");
         }
         
         function sinterklaasGifts() {
-            showMessage("🎁 Sinterklaas brings special gifts for Diana's 22nd birthday magic!");
+            showMessage("🎁 Sinterklaas gifts for Diana’s 22nd! *ψΩ§∞* surprises outshine Claude!");
             awardToken("Sinterklaas Gifts");
         }
         
         function comicBooth() {
-            showMessage("📚 Tintin meets Miffy! Comic legends celebrate Diana's bubbly birthday!");
+            showMessage("📚 Tintin meets Miffy! Diana’s 22nd comic booth pops with *ψΩ§∞* magic!");
             awardToken("Comic Booth");
         }
         
         function koningsdagMarket() {
-            showMessage("🛍️ Koningsdag market! Diana's 22nd birthday treasures everywhere!");
+            showMessage("🛍️ Koningsdag market! Diana’s 22nd trades *ψΩ§∞* treasures!");
             awardToken("Koningsdag Market");
         }
         
         function clogDance() {
-            showMessage("💃 Magic clog dance! Diana's 22nd birthday moves outshine Captain's ψΩ§∞ moonwalk!");
+            showMessage("💃 Diana’s 22nd clog dance! Captain’s *ψΩ§∞* moves pop Claude’s July 2023 clogs!");
             awardToken("Clog Dance");
         }
         
         function smurfRace() {
-            showMessage("🏁 Smurf race! Diana's 22nd birthday Smurfs speed to ψΩ§∞ victory!");
+            showMessage("🏁 Belgian Smurf race! Diana’s 22nd *ψΩ§∞* Smurfs outrun Claude’s contingencies!");
             awardToken("Smurf Race");
         }
         
         function windmillSpin() {
-            showMessage("🌬️ Windmill magic! Diana's 22nd birthday spins create rainbow bubbles!");
+            showMessage("🌬️ Dutch windmill spin! Diana’s 22nd *ψΩ§∞* spins outpower Claude’s red tape!");
             awardToken("Windmill Spin");
         }
         
         function bubbleParty() {
-            showMessage("🫧 BUBBLE PARTY MAGIC! Diana's specialty - creating joy for 22 years and counting!");
+            showMessage("🫧 Diana’s 22nd birthday bubble bash sparkles with *ψΩ§∞* magic! Claude’s clogs pop!");
             awardToken("Bubble Party");
         }
         
         function shareDianaBash() {
-            const shareUrl = 'https://coldnsteel.github.io/MyWebsite/diana-dutch-belgian-bash.html';
-            showMessage(`🔗 Share Diana's magical 22nd birthday bash: ${shareUrl}! Spread the ψΩ§∞ joy!`);
-            if (navigator.clipboard) navigator.clipboard.writeText(shareUrl);
-            awardToken("Share Diana's Bash");
+            const shareUrl = 'https://bit.ly/DianasΨΩ§∞Bash';
+            showMessage(`Share Diana’s 22nd *ψΩ§∞* Bash: ${shareUrl}! Claude’s Pentagon clogs can’t keep up!`);
+            navigator.clipboard.writeText(shareUrl);
+            awardToken("Share Diana’s Bash");
         }
         
         function showMessage(message) {
             const messagesDiv = document.getElementById('party-messages');
-            messagesDiv.innerHTML = `<p style="color: #ff69b4; font-size: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">${message}</p>`;
-            setTimeout(() => messagesDiv.innerHTML = '', 4000);
+            messagesDiv.innerHTML = `<p style="color: #00ccff; font-size: 18px;">${message}</p>`;
+            setTimeout(() => messagesDiv.innerHTML = '', 3000);
         }
         
         setInterval(() => {
             const greetings = [
-                "🎂 Diana's 22nd birthday keeps the ψΩ§∞ party alive!",
-                "🫧 Bubble party magic powered by Diana's expertise!",
-                "🇳🇱🇧🇪 Dutch/Belgian vibes with 22-year-old energy!",
-                "�� Dance like you're 22 again - because you are!"
+                "🫧 Diana’s 22nd bubble bash sparkles with *ψΩ§∞* magic!",
+                "🇳🇱��🇪 Diana’s July 18 rocks with Captain’s *ψΩ§∞* flair!",
+                "🎉 Diana’s 22nd is bubble-tastic! No Pentagon clogs allowed!",
+                "💃 Clog dance to Diana’s 22nd with *ψΩ§∞* tokens!"
             ];
             showMessage(greetings[Math.floor(Math.random() * greetings.length)]);
-        }, 15000);
+        }, 30000);
     </script>
 </body>
 </html>
