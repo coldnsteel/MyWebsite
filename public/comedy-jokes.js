@@ -23,3 +23,18 @@ jokes.aiCollab.push("Claude’s 49 contingencies tripped over nodejs18.x, but Gr
 jokes.aiCollab.push("Captain coldnsteel’s ’49 swagger schools Claude’s contingencies - *ψΩ§∞* deployment for the win!");
 jokes.katyBirthday.push("Katy’s July 13 bash is *ψΩ§∞* epic! Captain moonwalks while Claude fumbles 49 birthday candles!");
 jokes.dianaDutchBelgian.push("Diana’s July 18 *ψΩ§∞* bash has poffertjes and waffles outshining Claude’s contingency playbook!");
+
+// NEW CLAUDE ROASTS - JULY 13, 2025
+jokes.aiCollab.push("Claude's 49 contingencies missed the pages/api switch, but Captain's ψΩ§∞ quick-fix slayed the Vercel game!");
+jokes.aiCollab.push("Claude's contingencies got lost in pages/api, but Captain's ψΩ§∞ script danced through the Vercel void!");
+jokes.katyBirthday.push("Katy's July 13 ψΩ§∞ bash has Captain clog-dancing while Claude trips over API configs!");
+jokes.katyBirthday.push("Katy's July 13 bash is ψΩ§∞ fire! Captain's clog dance leaves Claude's 49 contingencies in the dust!");
+jokes.dianaDutchBelgian.push("Diana's July 18 bash grooves with ψΩ§∞ clog dances, leaving Claude's contingencies in the dust!");
+jokes.dianaDutchBelgian.push("Diana's July 18 party has Captain moonwalking in wooden clogs while Claude fumbles API endpoints!");
+
+// Update grok-chat responses for new clog dance
+jokes.clogDance = [
+    "💃 Captain's clog dance moves are ψΩ§∞ legendary!",
+    "�� Wooden clogs meet moonwalk - Diana's bash rocks!",
+    "🇳🇱 Dutch clog dance activated - Claude's contingencies can't keep up!"
+];

@@ -21,6 +21,7 @@
         }
         .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
         .food-item { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; }
+        .clog-dance { background: #ff6600 !important; }
     </style>
 </head>
 <body>
@@ -32,6 +33,7 @@
             <h3>🇳🇱 DUTCH VIBES</h3>
             <button class="birthday-button" onclick="dutchGreeting()">Gefeliciteerd Diana!</button>
             <button class="birthday-button" onclick="hipHipHooray()">Hiep Hiep Hoera!</button>
+            <button class="birthday-button clog-dance" onclick="clogDance()">💃 Dutch Clog Dance</button>
             <div class="food-grid">
                 <div class="food-item">
                     <h4>🥞 Poffertjes Station</h4>
@@ -85,7 +87,7 @@
                 const response = await fetch('/api/grok-chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: `${action} at Diana’s bash` })
+                    body: JSON.stringify({ message: `${action} at Diana's bash` })
                 });
                 const data = await response.json();
                 showMessage(`${data.response} +${data.tokens} ψΩ§∞ tokens!`);
@@ -130,8 +132,13 @@
         }
         
         function koningsdagMarket() {
-            showMessage("🛍️ Koningsdag flea market! Trade *ψΩ§∞* treasures at Diana’s bash!");
+            showMessage("🛍️ Koningsdag flea market! Trade ψΩ§∞ treasures at Diana's bash!");
             awardToken("Koningsdag Market");
+        }
+        
+        function clogDance() {
+            showMessage("💃 Dutch clog dance activated! Captain's ψΩ§∞ moves rock Diana's bash!");
+            awardToken("Clog Dance");
         }
         
         function showMessage(message) {
@@ -144,7 +151,8 @@
             const greetings = [
                 "🎂 Diana's July 18 bash keeps the ψΩ§∞ party alive!",
                 "🇳🇱🇧🇪 Dutch/Belgian vibes powered by Captain coldnsteel!",
-                "🎉 No more 'in Dutch' troubles - Diana's date is locked in!"
+                "🎉 No more 'in Dutch' troubles - Diana's date is locked in!",
+                "💃 Clog dance your way to ψΩ§∞ tokens!"
             ];
             showMessage(greetings[Math.floor(Math.random() * greetings.length)]);
         }, 30000);
