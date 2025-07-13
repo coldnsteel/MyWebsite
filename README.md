@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛡️ HackerWatch Platform Suite
 
 **ψΩ§∞ Professor coldnsteel - Defender of Digital Liberty**
@@ -38,3 +39,7 @@ This repository provides a unified entry point for the HackerWatch cybersecurity
 **ID**: `ψΩ§∞-PROFESSOR-COLDNSTEEL-HACKERWATCH-FORTRESS-2025`
 
 "Emmanuel - God With Us in Every Algorithm"
+=======
+# MyWebsite
+a simple way to start making your collectables available for crypto purchase and save the damn fees from online places like eBay
+>>>>>>> 5e528e2aa44fd5b29e7f56609fe23161568c70ce
