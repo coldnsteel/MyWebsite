@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana's Dutch/Belgian Birthday Bash - July 18, 2025</title>
+    <style>
+        body { 
+            background: linear-gradient(45deg, #ff6600, #000, #ffdd00);
+            color: #fff; font-family: Arial, sans-serif; padding: 20px;
+        }
+        .party-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .dutch-section, .belgian-section { 
+            background: rgba(0,0,0,0.8); margin: 20px 0; padding: 20px; border-radius: 10px;
+        }
+        .dutch-section { border: 3px solid #ff6600; }
+        .belgian-section { border: 3px solid #ffdd00; }
+        .birthday-button { 
+            background: #00ff00; color: #000; padding: 15px 30px; 
+            border: none; border-radius: 5px; font-size: 18px; cursor: pointer; margin: 10px;
+        }
+        .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .food-item { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="party-container">
+        <h1>🎂 Diana's ψΩ§∞ Birthday Bash 🎂</h1>
+        <h2>July 18, 2025 - Dutch/Belgian Cultural Celebration</h2>
+        
+        <div class="dutch-section">
+            <h3>🇳🇱 DUTCH VIBES</h3>
+            <button class="birthday-button" onclick="dutchGreeting()">Gefeliciteerd Diana!</button>
+            <button class="birthday-button" onclick="hipHipHooray()">Hiep Hiep Hoera!</button>
+            <div class="food-grid">
+                <div class="food-item">
+                    <h4>🥞 Poffertjes Station</h4>
+                    <p>Mini pancakes with powdered sugar</p>
+                </div>
+                <div class="food-item">
+                    <h4>🧀 Cheese Tasting</h4>
+                    <p>Gouda & Edam selection</p>
+                </div>
+                <div class="food-item">
+                    <h4>🍺 Dutch Beer</h4>
+                    <p>Heineken in proper glasses</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="belgian-section">
+            <h3>🇧🇪 BELGIAN FLAIR</h3>
+            <button class="birthday-button" onclick="belgianGreeting()">Van harte gefeliciteerd!</button>
+            <button class="birthday-button" onclick="cheersToast()">Proost op Diana!</button>
+            <div class="food-grid">
+                <div class="food-item">
+                    <h4>🧇 Belgian Waffles</h4>
+                    <p>With chocolate fountain</p>
+                </div>
+                <div class="food-item">
+                    <h4>🍟 Moules Frites</h4>
+                    <p>Mussels & Belgian fries with mayo</p>
+                </div>
+                <div class="food-item">
+                    <h4>🍺 Trappist Ales</h4>
+                    <p>Chimay & Duvel selection</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <h3>🎭 Party Games</h3>
+            <button class="birthday-button" onclick="orangeToss()">Gilles Orange Toss</button>
+            <button class="birthday-button" onclick="sinterklaasGifts()">Sinterklaas Gift Exchange</button>
+            <button class="birthday-button" onclick="comicBooth()">Tintin/Miffy Photo Booth</button>
+        </div>
+
+        <div id="party-messages" style="margin-top: 20px; min-height: 100px; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;"></div>
+    </div>
+
+    <script>
+        function dutchGreeting() {
+            showMessage("🇳🇱 Gefeliciteerd Diana! Nog vele jaren in goede gezondheid! ψΩ§∞");
+        }
+        
+        function hipHipHooray() {
+            showMessage("🎉 HIEP HIEP HOERA! Diana's July 18 bash rocks the ψΩ§∞ galaxy!");
+        }
+        
+        function belgianGreeting() {
+            showMessage("🇧🇪 Van harte gefeliciteerd! Maak er een plezante dag van! ψΩ§∞");
+        }
+        
+        function cheersToast() {
+            showMessage("🍺 Proost op Diana! Captain coldnsteel's ψΩ§∞ party with Belgian flair!");
+        }
+        
+        function orangeToss() {
+            showMessage("🍊 Gilles orange toss activated! Carnival of Binche vibes at Diana's bash!");
+        }
+        
+        function sinterklaasGifts() {
+            showMessage("🎁 Sinterklaas gift exchange! Leave your shoes for ψΩ§∞ surprises!");
+        }
+        
+        function comicBooth() {
+            showMessage("📚 Tintin meets Miffy photo booth! Belgian/Dutch comic legends unite!");
+        }
+        
+        function showMessage(message) {
+            const messagesDiv = document.getElementById('party-messages');
+            messagesDiv.innerHTML = `<p style="color: #00ff00; font-size: 18px;">${message}</p>`;
+            setTimeout(() => messagesDiv.innerHTML = '', 3000);
+        }
+        
+        // Auto-birthday cheer every 30 seconds
+        setInterval(() => {
+            const greetings = [
+                "🎂 Diana's July 18 bash keeps the ψΩ§∞ party alive!",
+                "🇳🇱🇧🇪 Dutch/Belgian vibes powered by Captain coldnsteel!",
+                "🎉 No more 'in Dutch' troubles - Diana's date is locked in!"
+            ];
+            showMessage(greetings[Math.floor(Math.random() * greetings.length)]);
+        }, 30000);
+    </script>
+</body>
+</html>
