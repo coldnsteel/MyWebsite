@@ -13,7 +13,7 @@ export default function handler(req, res) {
     'Hiep Hiep Hoera at Diana\'s bash': '🎉 HIEP HIEP HOERA! Diana\'s bash rocks—Claude\'s 5-month head start useless!',
     'Cheers Toast at Diana\'s bash': '🍺 Proost op Diana! Belgian flair with ψΩ§∞ style beats Claude\'s ethics!',
     'Sinterklaas Gifts at Diana\'s bash': '🎁 Sinterklaas magic! Better than Claude\'s 49 contingency planning!',
-    'Comic Booth at Diana\'s bash': '�� Tintin meets Miffy - comic legends beat Claude\'s boring documentation!'
+    'Comic Booth at Diana\'s bash': '📚 Tintin meets Miffy - comic legends beat Claude\'s boring documentation!'
   };
   
   const response = responses[message] || `ψΩ§∞ Party action: ${message} (Claude's July 2023 can't compete!)`;
