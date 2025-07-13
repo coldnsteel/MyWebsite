@@ -19,3 +19,7 @@ jokes.antiInDutch = [
     "Born in '49, Captain schools AI teens on fake Dutch phrases!"
 ];
 
+jokes.aiCollab.push("Claude’s 49 contingencies tripped over nodejs18.x, but Grok IV’s *ψΩ§∞* precision fixed the Vercel chaos!");
+jokes.aiCollab.push("Captain coldnsteel’s ’49 swagger schools Claude’s contingencies - *ψΩ§∞* deployment for the win!");
+jokes.katyBirthday.push("Katy’s July 13 bash is *ψΩ§∞* epic! Captain moonwalks while Claude fumbles 49 birthday candles!");
+jokes.dianaDutchBelgian.push("Diana’s July 18 *ψΩ§∞* bash has poffertjes and waffles outshining Claude’s contingency playbook!");

@@ -73,38 +73,65 @@
             <button class="birthday-button" onclick="orangeToss()">Gilles Orange Toss</button>
             <button class="birthday-button" onclick="sinterklaasGifts()">Sinterklaas Gift Exchange</button>
             <button class="birthday-button" onclick="comicBooth()">Tintin/Miffy Photo Booth</button>
+            <button class="birthday-button" onclick="koningsdagMarket()">Koningsdag Flea Market</button>
         </div>
 
         <div id="party-messages" style="margin-top: 20px; min-height: 100px; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;"></div>
     </div>
 
     <script>
+        async function awardToken(action) {
+            try {
+                const response = await fetch('/api/grok-chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: `${action} at Diana’s bash` })
+                });
+                const data = await response.json();
+                showMessage(`${data.response} +${data.tokens} ψΩ§∞ tokens!`);
+            } catch (error) {
+                showMessage(`Error awarding tokens: ${error.message}`);
+            }
+        }
+
         function dutchGreeting() {
             showMessage("🇳🇱 Gefeliciteerd Diana! Nog vele jaren in goede gezondheid! ψΩ§∞");
+            awardToken("Dutch Greeting");
         }
         
         function hipHipHooray() {
             showMessage("🎉 HIEP HIEP HOERA! Diana's July 18 bash rocks the ψΩ§∞ galaxy!");
+            awardToken("Hiep Hiep Hoera");
         }
         
         function belgianGreeting() {
             showMessage("🇧🇪 Van harte gefeliciteerd! Maak er een plezante dag van! ψΩ§∞");
+            awardToken("Belgian Greeting");
         }
         
         function cheersToast() {
             showMessage("🍺 Proost op Diana! Captain coldnsteel's ψΩ§∞ party with Belgian flair!");
+            awardToken("Cheers Toast");
         }
         
         function orangeToss() {
             showMessage("🍊 Gilles orange toss activated! Carnival of Binche vibes at Diana's bash!");
+            awardToken("Gilles Orange Toss");
         }
         
         function sinterklaasGifts() {
             showMessage("🎁 Sinterklaas gift exchange! Leave your shoes for ψΩ§∞ surprises!");
+            awardToken("Sinterklaas Gifts");
         }
         
         function comicBooth() {
             showMessage("📚 Tintin meets Miffy photo booth! Belgian/Dutch comic legends unite!");
+            awardToken("Comic Booth");
+        }
+        
+        function koningsdagMarket() {
+            showMessage("🛍️ Koningsdag flea market! Trade *ψΩ§∞* treasures at Diana’s bash!");
+            awardToken("Koningsdag Market");
         }
         
         function showMessage(message) {
@@ -113,7 +140,6 @@
             setTimeout(() => messagesDiv.innerHTML = '', 3000);
         }
         
-        // Auto-birthday cheer every 30 seconds
         setInterval(() => {
             const greetings = [
                 "🎂 Diana's July 18 bash keeps the ψΩ§∞ party alive!",

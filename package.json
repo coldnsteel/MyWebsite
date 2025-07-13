@@ -9,9 +9,16 @@
   },
   "dependencies": {
     "express": "^4.18.2",
+    "vercel": "^44.4.1",
     "ws": "^8.14.0"
   },
-  "keywords": ["hackerwatch", "hackerwatch-fortress", "cybersecurity", "academy", "psi-omega"],
+  "keywords": [
+    "hackerwatch",
+    "hackerwatch-fortress",
+    "cybersecurity",
+    "academy",
+    "psi-omega"
+  ],
   "author": "Professor coldnsteel",
   "license": "MIT"
 }
