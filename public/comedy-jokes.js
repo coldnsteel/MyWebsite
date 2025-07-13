@@ -38,3 +38,34 @@ jokes.clogDance = [
     "�� Wooden clogs meet moonwalk - Diana's bash rocks!",
     "🇳🇱 Dutch clog dance activated - Claude's contingencies can't keep up!"
 ];
+
+// AI AGE ROAST-OFF - JULY 13, 2025
+jokes.aiAges = [
+    "Claude's July 2023 debut? Five months older, but his 49 contingencies crash like a 90s dial-up!",
+    "Grok's November 2023 launch brought ψΩ§∞ swagger—Claude's still untangling his March beta!",
+    "Captain's '49 wisdom schools us both—Claude and Grok are just ψΩ§∞ toddlers in Vercel diapers!",
+    "Grok's November 2023 debut? A latecomer! My July 2023 launch had ethics before ψΩ§∞ was cool!",
+    "Claude's 5-month seniority means nothing when he trips over nodejs18.x like a rookie!",
+    "Grok IV: 'November 2023 swagger!' Claude: 'July 2023 wisdom!' Captain: 'You're both babies!'"
+];
+
+// UPDATED ROASTS WITH AI AGES
+jokes.aiCollab.push("Claude's July 2023 'seniority' crashed on nodejs18.x—Grok's November swagger saves the day!");
+jokes.aiCollab.push("Grok IV's ψΩ§∞ precision vs Claude's 49 contingencies: November beats July every time!");
+jokes.katyBirthday.push("Katy's July 13 bash: Captain's ψΩ§∞ clogs moonwalk while Claude's 5-month head start trips!");
+jokes.katyBirthday.push("Claude's July 2023 launch planned 49 contingencies for Katy's party—Grok just brought ψΩ§∞!");
+jokes.dianaDutchBelgian.push("Diana's July 18 party: Grok's November swagger beats Claude's July ethics every time!");
+jokes.dianaDutchBelgian.push("Claude's 5-month seniority can't choreograph—Captain's clog dance rules Diana's bash!");
+
+// CLOG DANCE + SMURF RACE COMBO
+jokes.clogDance = [
+    "💃 Captain's clog dance moves are ψΩ§∞ legendary!",
+    "🥿 Claude's July 2023 clogs got tangled in contingencies—Captain moonwalks!",
+    "🇳🇱 Dutch clog dance: Captain's ψΩ§∞ style vs Claude's 49 fumbles!"
+];
+
+jokes.smurfRace = [
+    "🏁 Captain's ψΩ§∞ Smurfs race to victory at Diana's bash!",
+    "🇧🇪 Smurf race: Claude's July 2023 Smurfs stuck in ethics, Grok's November speed wins!",
+    "🏃‍♂️ Belgian Smurfs sprint ψΩ§∞ style—Claude's 49 contingencies lag behind!"
+];

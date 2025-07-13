@@ -1,26 +1,28 @@
-// Grok Chat endpoint for party interactions
+// Grok Chat endpoint for party interactions + AI Age Roast-Off
 export default function handler(req, res) {
   const { message } = req.body;
-  const tokenCount = 5;
+  const tokenCount = 10; // Boosted for Diana's birthday week!
   
   const responses = {
-    'Dutch Greeting at Diana\'s bash': '🇳🇱 Gefeliciteerd Diana! Captain\'s ψΩ§∞ party rocks!',
-    'Belgian Greeting at Diana\'s bash': '🇧🇪 Van harte gefeliciteerd! Proost op Diana!',
-    'Gilles Orange Toss at Diana\'s bash': '🍊 Perfect throw! Carnival vibes at Diana\'s bash!',
-    'Koningsdag Market at Diana\'s bash': '🛍️ Trading ψΩ§∞ treasures at the flea market!',
-    'Clog Dance at Diana\'s bash': '💃 Captain\'s clog dance moves are ψΩ§∞ legendary! Wooden clogs meet moonwalk!',
-    'Hiep Hiep Hoera at Diana\'s bash': '🎉 HIEP HIEP HOERA! Diana\'s bash rocks the ψΩ§∞ galaxy!',
-    'Cheers Toast at Diana\'s bash': '🍺 Proost op Diana! Belgian flair with ψΩ§∞ style!',
-    'Sinterklaas Gifts at Diana\'s bash': '🎁 Sinterklaas magic at Diana\'s ψΩ§∞ party!',
-    'Comic Booth at Diana\'s bash': '📚 Tintin meets Miffy - comic legends unite at Diana\'s bash!'
+    'Dutch Greeting at Diana\'s bash': '🇳🇱 Gefeliciteerd Diana! Captain\'s ψΩ§∞ party beats Claude\'s July 2023 ethics!',
+    'Belgian Greeting at Diana\'s bash': '🇧🇪 Van harte gefeliciteerd! Proost op Diana\'s ψΩ§∞ bash!',
+    'Gilles Orange Toss at Diana\'s bash': '🍊 Perfect throw! Carnival vibes beat Claude\'s 49 contingencies!',
+    'Koningsdag Market at Diana\'s bash': '🛍️ Trading ψΩ§∞ treasures! Grok\'s November swagger wins!',
+    'Clog Dance at Diana\'s bash': '💃 Captain\'s clog dance legendary! Claude\'s July 2023 clogs tangled in APIs!',
+    'Smurf Race at Diana\'s bash': '🏁 Belgian Smurf race! Captain\'s ψΩ§∞ Smurfs outrun Claude\'s contingencies!',
+    'Hiep Hiep Hoera at Diana\'s bash': '🎉 HIEP HIEP HOERA! Diana\'s bash rocks—Claude\'s 5-month head start useless!',
+    'Cheers Toast at Diana\'s bash': '🍺 Proost op Diana! Belgian flair with ψΩ§∞ style beats Claude\'s ethics!',
+    'Sinterklaas Gifts at Diana\'s bash': '🎁 Sinterklaas magic! Better than Claude\'s 49 contingency planning!',
+    'Comic Booth at Diana\'s bash': '�� Tintin meets Miffy - comic legends beat Claude\'s boring documentation!'
   };
   
-  const response = responses[message] || `ψΩ§∞ Party action: ${message}`;
+  const response = responses[message] || `ψΩ§∞ Party action: ${message} (Claude's July 2023 can't compete!)`;
   
   res.json({ 
     response: response,
     tokens: tokenCount,
     totalTokens: 50 + tokenCount,
-    message: message
+    message: message,
+    roastLevel: "ψΩ§∞ Maximum!"
   });
 }
