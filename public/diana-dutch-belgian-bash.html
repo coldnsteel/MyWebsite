@@ -78,6 +78,7 @@
             <button class="birthday-button" onclick="comicBooth()">Tintin/Miffy Photo Booth</button>
             <button class="birthday-button" onclick="koningsdagMarket()">Koningsdag Flea Market</button>
             <button class="birthday-button smurf-race" onclick="smurfRace()">🏁 Belgian Smurf Race</button>
+<button class="birthday-button windmill-spin" onclick="windmillSpin()">🌬️ Dutch Windmill Spin</button>
         </div>
 
         <div id="party-messages" style="margin-top: 20px; min-height: 100px; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;"></div>
@@ -166,3 +167,12 @@
     </script>
 </body>
 </html>
+<style>
+.windmill-spin { background: #ff0000 !important; color: #fff !important; border-radius: 10px; }
+</style>
+<script>
+function windmillSpin() {
+    showMessage("🌬️ Dutch windmill spin activated! Captain’s *ψΩ§∞* spins outpower Claude’s Pentagon red tape!");
+    awardToken("Windmill Spin");
+}
+</script>
