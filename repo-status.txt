@@ -1,0 +1,40 @@
+total 364
+drwxrwxrwx+  14 codespace root        4096 Jul 28 23:01 .
+drwxr-xrwx+   7 codespace root        4096 Jul 20 20:47 ..
+drwxrwxrwx+   9 codespace root        4096 Jul 26 22:04 .git
+-rw-rw-rw-    1 codespace root          64 Jul 19 20:24 .gitignore
+drwxrwxrwx+   5 codespace codespace   4096 Jul 19 21:16 Academy-Edition
+drwxrwxrwx+   4 codespace codespace   4096 Jul 19 21:34 Children-Books
+drwxrwxrwx+   5 codespace codespace   4096 Jul 19 21:16 HackerWatch-Edition
+drwxrwxrwx+   2 codespace root        4096 Jul 19 20:24 HackerWatch-Fortress
+drwxrwxrwx+   2 codespace root        4096 Jul 19 20:24 KOZMIC-KASINO-
+-rw-rw-rw-    1 codespace root        1067 Jul 19 20:24 LICENSE
+drwxrwxrwx+   5 codespace codespace   4096 Jul 19 21:16 Other-Repositories
+-rw-rw-rw-    1 codespace root        1556 Jul 19 20:24 README.md
+-rw-rw-rw-    1 codespace codespace   1888 Jul 26 21:55 admin.html
+drwxrwxrwx+   2 codespace codespace   4096 Jul 19 21:20 api
+-rw-rw-rw-    1 codespace root       11205 Jul 19 20:24 blog.html
+-rw-rw-rw-    1 codespace codespace  30673 Jul 26 21:57 index.html
+-rw-rw-rw-    1 codespace root        1406 Jul 19 20:24 jokes.js
+drwxrwxrwx+ 230 codespace codespace  12288 Jul 19 20:25 node_modules
+-rw-rw-rw-    1 codespace codespace 231072 Jul 19 20:25 package-lock.json
+-rw-rw-rw-    1 codespace root         528 Jul 19 20:24 package.json
+drwxrwxrwx+   3 codespace root        4096 Jul 19 20:24 pages
+drwxrwxrwx+   2 codespace root        4096 Jul 26 21:55 products
+drwxrwxrwx+   4 codespace root        4096 Jul 19 20:24 public
+-rw-rw-rw-    1 codespace codespace      0 Jul 28 23:01 repo-status.txt
+-rw-rw-rw-    1 codespace root         157 Jul 19 21:20 vercel.json
+=== GIT STATUS ===
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    blog.index
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	repo-status.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
