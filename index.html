@@ -1,98 +1,815 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyWebsite - ψΩ§∞ Showroom</title>
+    <title>GRSMFC - Premium Collectibles & Live Auctions</title>
+    <meta name="description" content="GRSMFC Auctions: Rare stamps, coins, digital products. Pay with BTC, ETH, USDT. Low fees, Ledger-secured.">
+    <meta name="keywords" content="collectibles, stamps, coins, auctions, crypto, GRSMFC">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Courier New', monospace;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-            color: #00ff00;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            text-align: center;
-            padding: 50px 20px;
         }
-        .showroom-title {
-            font-size: 3rem;
-            color: #00ff00;
-            text-shadow: 0 0 30px #00ff00;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 25px;
             margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-        .status-display {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            padding: 20px;
-            border: 2px solid #00ff00;
-            border-radius: 10px;
-            background: rgba(0, 255, 0, 0.1);
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
             gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto 40px;
         }
-        .product-card {
-            background: rgba(0, 255, 0, 0.05);
-            border: 2px solid #00ff00;
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.3s;
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
         }
-        .product-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
-        }
-        .product-title { font-size: 1.4rem; margin-bottom: 10px; }
-        .product-price { font-size: 1.8rem; color: #00ff00; font-weight: bold; margin: 10px 0; }
-        .shop-button {
-            background: linear-gradient(135deg, #00ff00, #008800);
+
+        .status-badge {
+            background: #00ff00;
             color: #000;
-            padding: 15px 30px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .premium-showcase {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .premium-showcase h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .premium-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .premium-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .premium-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .item-image {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .item-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .item-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .item-condition {
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .item-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ff88;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+
+        .auction-info {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .payment-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .crypto-button {
+            padding: 12px 20px;
             border: none;
             border-radius: 8px;
             font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
-            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btc-button {
+            background: linear-gradient(135deg, #f7931a, #ff8c00);
+            color: white;
+        }
+
+        .eth-button {
+            background: linear-gradient(135deg, #627eea, #4169e1);
+            color: white;
+        }
+
+        .usdt-button {
+            background: linear-gradient(135deg, #26a17b, #1e7e34);
+            color: white;
+        }
+
+        .paypal-button {
+            background: linear-gradient(135deg, #0070ba, #003087);
+            color: white;
+        }
+
+        .auction-button {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+        }
+
+        .crypto-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .admin-section {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #ffd700;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .admin-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .admin-form input,
+        .admin-form select,
+        .admin-form textarea {
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .admin-form input::placeholder,
+        .admin-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .add-button {
+            background: linear-gradient(135deg, #ffd700, #ffed4a);
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .add-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .premium-showcase {
+                padding: 20px;
+            }
+
+            .premium-showcase h2 {
+                font-size: 2rem;
+            }
+
+            .premium-items {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .admin-form {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <h1 class="showroom-title">🛍️ MyWebsite Showroom</h1>
-    <div class="status-display">
-        ψΩ§∞ SHOWROOM ACTIVE<br>
-        GLORIFYING JESUS WITH RIGHTEOUS PRODUCTS
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <span class="logo">🏛️ GRSMFC AUCTIONS</span>
+                    <span class="status-badge">✅ LIVE & READY</span>
+                </div>
+                <nav class="nav">
+                    <a href="#admin">⚡ Add Items</a>
+                    <a href="#premium">💎 Premium</a>
+                    <a href="#auctions">🔨 Auctions</a>
+                    <a href="#digital">📚 Digital</a>
+                    <a href="#podcast">🎙️ Podcast</a>
+                    <a href="blog.html">📝 Blog</a>
+                    <a href="#contact">📞 Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <section id="admin" class="admin-section">
+            <h2 style="color: #ffd700; text-align: center; margin-bottom: 20px;">⚡ ADMIN CONTROL PANEL</h2>
+            <div class="admin-form">
+                <input type="text" id="newItemTitle" placeholder="Item Title">
+                <input type="number" id="newItemPrice" placeholder="Price (USD)">
+                <textarea id="newItemDescription" placeholder="Description" rows="3"></textarea>
+                <input type="text" id="newItemCondition" placeholder="Condition">
+                <select id="newItemType">
+                    <option value="premium">Premium</option>
+                    <option value="auction">Auction</option>
+                    <option value="digital">Digital</option>
+                </select>
+                <input type="text" id="newItemEmoji" placeholder="Emoji (e.g., 🪙)">
+            </div>
+            <button class="add-button" onclick="addNewItem()">ADD ITEM TO INVENTORY</button>
+        </section>
+
+        <section id="premium" class="premium-showcase">
+            <h2>💎 PREMIUM COLLECTION</h2>
+            <div class="premium-items" id="premiumContainer">
+                <!-- Premium items will be loaded here -->
+            </div>
+        </section>
+
+        <section id="auctions" class="premium-showcase">
+            <h2>🔨 LIVE AUCTIONS</h2>
+            <div class="premium-items" id="auctionContainer">
+                <!-- Auction items will be loaded here -->
+            </div>
+        </section>
+
+        <section id="digital" class="premium-showcase">
+            <h2>📚 DIGITAL TREASURE VAULT</h2>
+            <div class="premium-items" id="digitalContainer">
+                <!-- Digital items will be loaded here -->
+            </div>
+        </section>
+
+        <section id="podcast" class="premium-showcase">
+            <h2>🎙️ GRSMFC CHRONICLES</h2>
+            <div class="premium-items" id="podcastContainer">
+                <div class="premium-item">
+                    <div class="item-image">🎙️</div>
+                    <div class="item-details">
+                        <div class="item-title">Episode 1: The Rise of Crypto Collectibles</div>
+                        <div class="item-description">
+                            Exploring how crypto payments are transforming the collectibles market. Coming soon!
+                        </div>
+                        <div class="item-condition">Podcast Episode</div>
+                        <div class="item-price">Free</div>
+                        <div class="payment-buttons">
+                            <button class="crypto-button btc-button" onclick="alert('🎧 Podcast launching soon! Subscribe for updates.')">🎧 Coming Soon</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="premium-showcase">
+            <h2>📞 CONTACT GRSMFC</h2>
+            <form class="contact-form" onsubmit="handleContactForm(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="subject" placeholder="Subject" required>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-button">SEND MESSAGE</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>© 2025 Gottschalk, Ramirez, Santoro & Moseley Fine Collectibles</p>
+            <p>🔒 ETH Wallet: 0xfD9FD0c94caf9AdDbEd6cC47f2638C158</p>
+        </footer>
     </div>
-    
-    <div class="product-grid">
-        <div class="product-card">
-            <h3 class="product-title">🛡️ HackerWatch Fortress Pro</h3>
-            <p>Complete security suite with real-time threat detection</p>
-            <div class="product-price">$29.99/month</div>
-            <a class="shop-button" href="https://coldnsteel.github.io/dogpatch/">Buy Now</a>
-        </div>
+
+    <script>
+        console.log('GRSMFC starting...');
         
-        <div class="product-card">
-            <h3 class="product-title">🎵 Sound Studios Tracks</h3>
-            <p>Holy harmonies and cosmic rock glorifying JESUS</p>
-            <div class="product-price">$9.99/album</div>
-            <a class="shop-button" href="https://coldnsteel.github.io/dogpatch/">Buy Now</a>
-        </div>
+        var allItems = [];
         
-        <div class="product-card">
-            <h3 class="product-title">🎰 Kozmic Kasino Tokens</h3>
-            <p>ψΩ§∞ rewards for righteous rebellion</p>
-            <div class="product-price">$5.99/pack</div>
-            <a class="shop-button" href="https://coldnsteel.github.io/dogpatch/">Buy Now</a>
-        </div>
-    </div>
-    
-    <p style="font-size: 1.2rem; color: #00cc00;">
-        Browse products here, shop at Dogpatch! Defy dystopia with JESUS! 😎
-    </p>
+        // Initialize with default items + digital products
+        function initializeDefaultItems() {
+            var storedItems = localStorage.getItem('grsmfcItems');
+            if (storedItems) {
+                try {
+                    allItems = JSON.parse(storedItems);
+                } catch (e) {
+                    console.log('Error parsing stored items, using defaults');
+                    setDefaultItems();
+                }
+            } else {
+                setDefaultItems();
+            }
+        }
+        
+        function setDefaultItems() {
+            allItems = [
+                {
+                    id: 'penny-black',
+                    title: 'Penny Black 1840',
+                    description: 'The world\'s first adhesive postage stamp, featuring Queen Victoria. Museum-quality mint condition.',
+                    condition: 'Mint',
+                    price: 1200,
+                    emoji: '🖤',
+                    type: 'premium'
+                },
+                {
+                    id: 'american-block',
+                    title: 'Early American Block 1851',
+                    description: 'Rare block of four 3-cent Washington stamps from 1851. Exceptional condition with original gum.',
+                    condition: 'Mint Block',
+                    price: 3000,
+                    emoji: '🇺🇸',
+                    type: 'premium'
+                },
+                {
+                    id: 'ivan-kopeck',
+                    title: 'Ivan the Terrible Kopeck 1547',
+                    description: 'Authentic medieval Russian coin from the reign of Ivan IV. Museum-quality specimen.',
+                    condition: 'VF+',
+                    price: 2500,
+                    emoji: '👑',
+                    type: 'premium'
+                },
+                {
+                    id: 'treskilling',
+                    title: 'Treskilling Yellow 1855',
+                    description: 'Rare Swedish stamp with color error, one of the most valuable in the world.',
+                    condition: 'Used, VF',
+                    price: 2000,
+                    emoji: '📮',
+                    type: 'premium'
+                },
+                {
+                    id: 'benjamin-franklin',
+                    title: 'Benjamin Franklin 1c 1857',
+                    description: 'Classic U.S. stamp featuring Franklin, in pristine mint condition.',
+                    condition: 'Mint',
+                    price: 800,
+                    emoji: '🇺🇸',
+                    type: 'premium'
+                },
+                {
+                    id: 'silver-denarius',
+                    title: 'Roman Silver Denarius 100 AD',
+                    description: 'Authentic silver coin from Emperor Trajan\'s reign, well-preserved.',
+                    condition: 'VF',
+                    price: 600,
+                    emoji: '🏺',
+                    type: 'premium'
+                },
+                {
+                    id: 'gold-aureus',
+                    title: 'Roman Gold Aureus 64 AD',
+                    description: 'Rare gold coin from Emperor Nero, pristine condition.',
+                    condition: 'VF+',
+                    price: 5000,
+                    emoji: '🏺',
+                    type: 'premium'
+                },
+                {
+                    id: 'inverted-jenny',
+                    title: 'Inverted Jenny 1918 Reproduction',
+                    description: 'High-quality reproduction of the famous inverted airplane stamp.',
+                    condition: 'Reproduction',
+                    price: 89,
+                    currentBid: 45,
+                    emoji: '⚡',
+                    type: 'auction'
+                },
+                {
+                    id: 'roman-coins',
+                    title: 'Ancient Roman Coin Collection',
+                    description: 'Set of 5 authenticated Roman coins from 100-300 AD.',
+                    condition: 'Authenticated',
+                    price: 450,
+                    currentBid: 230,
+                    emoji: '🏺',
+                    type: 'auction'
+                },
+                {
+                    id: 'mauritius-post',
+                    title: 'Mauritius Post Office 1847 Reproduction',
+                    description: 'High-quality reproduction of the rare Mauritius "Post Office" stamp.',
+                    condition: 'Reproduction',
+                    price: 120,
+                    currentBid: 60,
+                    emoji: '📮',
+                    type: 'auction'
+                },
+                {
+                    id: 'kozmic-casino',
+                    title: 'Kozmic Casino',
+                    description: 'Immersive digital casino platform with AI-driven games and collectible-themed rewards.',
+                    condition: 'Digital Download',
+                    price: 99,
+                    emoji: '🎰💾',
+                    type: 'digital'
+                },
+                {
+                    id: 'personal-studio',
+                    title: 'Personal Studio Pro',
+                    description: 'Creative software for designing and cataloging collectibles, with AI-assisted valuation tools.',
+                    condition: 'Digital Download',
+                    price: 79,
+                    emoji: '🎨💾',
+                    type: 'digital'
+                },
+                {
+                    id: 'complete-bundle',
+                    title: 'Ultimate Digital Empire Bundle',
+                    description: 'Complete collection: Kozmic Casino, Personal Studio, all AI books, exclusive bonus content.',
+                    condition: 'Complete Bundle',
+                    price: 199,
+                    emoji: '📚🌟',
+                    type: 'digital'
+                }
+            ];
+            saveItems();
+        }
+        
+        // Save items to localStorage
+        function saveItems() {
+            try {
+                localStorage.setItem('grsmfcItems', JSON.stringify(allItems));
+            } catch (e) {
+                console.log('Error saving items to localStorage');
+            }
+        }
+
+        // Auction timers for real-time countdown
+        function updateAuctionTimers() {
+            var timers = [
+                { id: 'inverted-jenny', endTime: new Date(Date.now() + 2*60*60*1000 + 14*60*1000 + 33*1000) }, // 2h 14m 33s
+                { id: 'roman-coins', endTime: new Date(Date.now() + 5*60*60*1000 + 42*60*1000 + 18*1000) }, // 5h 42m 18s
+                { id: 'mauritius-post', endTime: new Date(Date.now() + 3*60*60*1000 + 28*60*1000 + 45*1000) } // 3h 28m 45s
+            ];
+            
+            for (var i = 0; i < timers.length; i++) {
+                var timer = timers[i];
+                var element = document.getElementById('timer-' + timer.id);
+                if (element) {
+                    var timeLeft = timer.endTime - Date.now();
+                    if (timeLeft <= 0) {
+                        element.innerHTML = 'Auction Ended';
+                        continue;
+                    }
+                    var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                    var display = '';
+                    if (days > 0) display = days + 'd ';
+                    display = display + hours + 'h ' + minutes + 'm ' + seconds + 's';
+                    element.innerHTML = display;
+                }
+            }
+        }
+
+        // Create item HTML
+        function createItemHTML(item) {
+            var html = '<div class="premium-item">';
+            html = html + '<div class="item-image">' + item.emoji + '</div>';
+            html = html + '<div class="item-details">';
+            html = html + '<div class="item-title">' + item.title + '</div>';
+            html = html + '<div class="item-description">' + item.description + '</div>';
+            html = html + '<div class="item-condition">' + item.condition + '</div>';
+            
+            if (item.type === 'auction' && item.currentBid) {
+                html = html + '<div class="auction-info">';
+                html = html + '<strong>Current Bid:</strong> $' + item.currentBid + '<br>';
+                html = html + '<strong>Buy Now:</strong> $' + item.price + '<br>';
+                html = html + '<strong>Ends:</strong> <span id="timer-' + item.id + '">Loading...</span>';
+                html = html + '</div>';
+                html = html + '<div class="payment-buttons">';
+                html = html + '<button class="crypto-button auction-button" onclick="placeBid(\'' + item.id + '\', ' + item.currentBid + ')">🔨 Place Bid</button>';
+                html = html + '<button class="crypto-button eth-button" onclick="buyNow(\'' + item.id + '\', ' + item.price + ')">💎 Buy Now</button>';
+                html = html + '</div>';
+            } else {
+                html = html + '<div class="item-price">$' + item.price + '</div>';
+                html = html + '<div class="payment-buttons">';
+                html = html + '<button class="crypto-button btc-button" onclick="handlePayment(\'' + item.id + '\', \'BTC\', ' + item.price + ')">₿ Bitcoin</button>';
+                html = html + '<button class="crypto-button eth-button" onclick="handleDirectETH(\'' + item.id + '\', ' + item.price + ')">💎 Direct ETH</button>';
+                html = html + '<button class="crypto-button usdt-button" onclick="handlePayment(\'' + item.id + '\', \'USDT\', ' + item.price + ')">💵 USDT</button>';
+                html = html + '<button class="crypto-button paypal-button" onclick="handlePayPal(\'' + item.id + '\', ' + item.price + ')">💳 PayPal</button>';
+                html = html + '</div>';
+            }
+            
+            html = html + '</div></div>';
+            return html;
+        }
+
+        // Render all items with digital section
+        function renderItems() {
+            var premiumContainer = document.getElementById('premiumContainer');
+            var auctionContainer = document.getElementById('auctionContainer');
+            var digitalContainer = document.getElementById('digitalContainer');
+            
+            if (!premiumContainer || !auctionContainer) return;
+            
+            var premiumHTML = '';
+            var auctionHTML = '';
+            var digitalHTML = '';
+            
+            for (var i = 0; i < allItems.length; i++) {
+                var item = allItems[i];
+                if (item.type === 'premium') {
+                    premiumHTML = premiumHTML + createItemHTML(item);
+                } else if (item.type === 'auction') {
+                    auctionHTML = auctionHTML + createItemHTML(item);
+                } else if (item.type === 'digital') {
+                    digitalHTML = digitalHTML + createItemHTML(item);
+                }
+            }
+            
+            premiumContainer.innerHTML = premiumHTML;
+            auctionContainer.innerHTML = auctionHTML;
+            if (digitalContainer) digitalContainer.innerHTML = digitalHTML;
+            
+            console.log('Items loaded: ' + allItems.length);
+        }
+
+        // Add new item
+        function addNewItem() {
+            var title = document.getElementById('newItemTitle').value;
+            var price = document.getElementById('newItemPrice').value;
+            var description = document.getElementById('newItemDescription').value;
+            var condition = document.getElementById('newItemCondition').value;
+            var type = document.getElementById('newItemType').value;
+            var emoji = document.getElementById('newItemEmoji').value;
+            
+            if (!title || !price || !description || !emoji) {
+                alert('Please fill in all fields!');
+                return;
+            }
+            
+            var newItem = {
+                id: title.toLowerCase().replace(/\s+/g, '-'),
+                title: title,
+                description: description,
+                condition: condition,
+                price: parseInt(price),
+                emoji: emoji,
+                type: type
+            };
+            
+            if (type === 'auction') {
+                newItem.currentBid = Math.floor(parseInt(price) * 0.5);
+            }
+            
+            allItems.push(newItem);
+            saveItems();
+            
+            // Clear form
+            document.getElementById('newItemTitle').value = '';
+            document.getElementById('newItemPrice').value = '';
+            document.getElementById('newItemDescription').value = '';
+            document.getElementById('newItemEmoji').value = '';
+            
+            alert('Item added successfully!');
+            renderItems();
+        }
+
+        // Handle payments
+        function handlePayment(itemId, currency, amount) {
+            var message = 'Payment Ready!\n\n';
+            message = message + 'Item: ' + itemId + '\n';
+            message = message + 'Currency: ' + currency + '\n';
+            message = message + 'Amount: $' + amount + '\n\n';
+            message = message + 'Next: Set up CoinGate account for real payments';
+            alert(message);
+        }
+
+        function handleDirectETH(itemId, amount) {
+            var message = 'Direct ETH Payment\n\n';
+            message = message + 'Send ETH equivalent of $' + amount + ' to:\n';
+            message = message + '0xfD9FD0c94caf9AdDbEd6cC47f2638C158\n\n';
+            message = message + 'Include transaction hash in contact form for verification.';
+            alert(message);
+        }
+
+        function handlePayPal(itemId, amount) {
+            var message = 'PayPal Payment\n\n';
+            message = message + 'Item: ' + itemId + '\n';
+            message = message + 'Amount: $' + amount + '\n\n';
+            message = message + 'Contact us via form to arrange PayPal payment.';
+            alert(message);
+        }
+
+        function placeBid(itemId, currentBid) {
+            var newBid = prompt('Current bid: $' + currentBid + '\nEnter your bid (must be higher):');
+            if (newBid && parseInt(newBid) > currentBid) {
+                updateItemBid(itemId, parseInt(newBid));
+                alert('Bid placed: $' + newBid + ' for ' + itemId);
+            } else if (newBid) {
+                alert('Bid must be higher than current bid of $' + currentBid);
+            }
+        }
+
+        function buyNow(itemId, price) {
+            var message = 'Buy Now: ' + itemId + ' for $' + price + '\n\n';
+            message = message + 'Choose payment method:\n';
+            message = message + '1. Direct ETH\n';
+            message = message + '2. CoinGate Crypto\n';
+            message = message + '3. PayPal';
+            var choice = prompt(message + '\n\nEnter 1, 2, or 3:');
+            if (choice === '1') {
+                handleDirectETH(itemId, price);
+            } else if (choice === '2') {
+                alert('CoinGate integration coming soon! Use Direct ETH for now.');
+            } else if (choice === '3') {
+                handlePayPal(itemId, price);
+            }
+        }
+
+        // Update item bid with persistence
+        function updateItemBid(itemId, newBid) {
+            for (var i = 0; i < allItems.length; i++) {
+                if (allItems[i].id === itemId) {
+                    allItems[i].currentBid = newBid;
+                    break;
+                }
+            }
+            saveItems();
+            renderItems();
+        }
+
+        // Handle contact form
+        function handleContactForm(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            
+            alert('Message received! We will respond within 24 hours.\n\nFor immediate assistance with crypto payments, include your transaction hash.');
+            
+            // Clear form
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('message').value = '';
+        }
+
+        // Initialize GRSMFC
+        function initializePage() {
+            console.log('Initializing GRSMFC...');
+            initializeDefaultItems();
+            renderItems();
+            
+            // Start auction timers
+            updateAuctionTimers();
+            setInterval(updateAuctionTimers, 1000);
+            
+            console.log('GRSMFC loaded successfully!');
+            console.log('Items loaded: ' + allItems.length);
+            console.log('ETH wallet ready: 0xfD9FD0c94caf9AdDbEd6cC47f2638C158');
+        }
+
+        // Start when page loads
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
 </body>
 </html>
